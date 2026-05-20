@@ -41,15 +41,11 @@ function openMenu() {
 
   function closeMenu() {
 
+    slides[currentSlide].classList.add("active");
+  
     currentMenu.classList.remove("active");
   
     document.querySelector(".close-hotspot").style.display = "none";
-  
-    setTimeout(() => {
-  
-      slides[currentSlide].classList.add("active");
-  
-    }, 500);
   }
 
 window.addEventListener("wheel", (event) => {
