@@ -80,3 +80,19 @@ body {
 .menu-slide.active {
   transform: translateY(0%);
 }
+
+.close-hotspot {
+  position: fixed;
+
+  bottom: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 76%;
+  height: 90px;
+
+  z-index: 3000;
+
+  display: none;
+}

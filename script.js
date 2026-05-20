@@ -36,6 +36,16 @@ function openMenu() {
     }
   
     currentMenu.classList.add("active");
+    document.querySelector(".close-hotspot").style.display = "block";
+  }
+
+  function closeMenu() {
+
+    currentMenu.classList.remove("active");
+  
+    slides[currentSlide].classList.add("active");
+  
+    document.querySelector(".close-hotspot").style.display = "none";
   }
 
 window.addEventListener("wheel", (event) => {
@@ -86,4 +96,10 @@ const menuHotspot = document.querySelector(".menu-hotspot");
 
 menuHotspot.addEventListener("click", () => {
   openMenu();
+});
+
+const closeHotspot = document.querySelector(".close-hotspot");
+
+closeHotspot.addEventListener("click", () => {
+  closeMenu();
 });
