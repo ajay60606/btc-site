@@ -19,7 +19,7 @@ function showSlide(index) {
 
   setTimeout(() => {
     isAnimating = false;
-  }, 1800);
+  }, 900);
 }
 
 window.addEventListener("wheel", (event) => {
@@ -55,11 +55,11 @@ window.addEventListener("touchend", (event) => {
 
   let difference = touchStartY - touchEndY;
 
-  if (difference > 50) {
+  if (difference > 20) {
     showSlide(currentSlide + 1);
   }
 
-  else if (difference < -50) {
+  else if (difference < -20) {
     showSlide(currentSlide - 1);
   }
 
