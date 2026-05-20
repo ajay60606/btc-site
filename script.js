@@ -43,9 +43,13 @@ function openMenu() {
 
     currentMenu.classList.remove("active");
   
-    slides[currentSlide].classList.add("active");
-  
     document.querySelector(".close-hotspot").style.display = "none";
+  
+    setTimeout(() => {
+  
+      slides[currentSlide].classList.add("active");
+  
+    }, 500);
   }
 
 window.addEventListener("wheel", (event) => {
