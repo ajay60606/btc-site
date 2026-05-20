@@ -41,7 +41,7 @@ let touchEndY = 0;
 
 window.addEventListener("touchstart", (event) => {
 
-  alert("touch working");
+
 
   touchStartY = event.changedTouches[0].screenY;
 
