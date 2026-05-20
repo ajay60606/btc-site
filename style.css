@@ -56,3 +56,17 @@ body {
 body {
   touch-action: none;
 }
+
+.menu-hotspot {
+  position: fixed;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 76%;
+  height: 60px;
+
+  z-index: 2000;
+}
