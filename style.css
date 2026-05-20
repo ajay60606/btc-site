@@ -70,3 +70,13 @@ body {
 
   z-index: 2000;
 }
+
+.menu-slide {
+  transform: translateY(-100%);
+
+  transition: transform 0.5s ease;
+}
+
+.menu-slide.active {
+  transform: translateY(0%);
+}
