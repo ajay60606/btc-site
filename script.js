@@ -35,3 +35,32 @@ window.addEventListener("wheel", (event) => {
     }
   
   });
+
+  let touchStartY = 0;
+let touchEndY = 0;
+
+window.addEventListener("touchstart", (event) => {
+
+  alert("touch working");
+
+  touchStartY = event.changedTouches[0].screenY;
+
+});
+
+window.addEventListener("touchend", (event) => {
+
+  if (isAnimating) return;
+
+  touchEndY = event.changedTouches[0].screenY;
+
+  let difference = touchStartY - touchEndY;
+
+  if (difference > 50) {
+    showSlide(currentSlide + 1);
+  }
+
+  else if (difference < -50) {
+    showSlide(currentSlide - 1);
+  }
+
+});
