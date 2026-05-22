@@ -39,7 +39,7 @@ function showSlide(index) {
     optionalHotspot.style.display = "none";
   }
 
-  if (currentSlide >= 26) {
+  if (currentSlide >= 26 && currentSlide <= 32) {
 
     menuHotspot.style.display = "none";
   
@@ -55,17 +55,12 @@ function showSlide(index) {
   localStorage.setItem("btc-slide", currentSlide);
 
   slides[currentSlide].classList.add("active");
-  if (currentSlide >= 26) {
+  if (currentSlide >= 26 && currentSlide <= 32) {
 
     menuHotspot.style.display = "none";
   
   }
   
-  else {
-  
-    menuHotspot.style.display = "block";
-  
-  }
 
   setTimeout(() => {
     isAnimating = false;
