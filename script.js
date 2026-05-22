@@ -131,15 +131,39 @@ window.addEventListener("touchend", (event) => {
   
     let difference = touchStartY - touchEndY;
   
-    if (currentSlide < 32) {
+    if (difference > 20) {
   
-      showSlide(currentSlide + 1);
+      if (currentSlide >= 26 && currentSlide <= 32) {
+  
+        if (currentSlide < 32) {
+          showSlide(currentSlide + 1);
+        }
+  
+      }
+  
+      else {
+  
+        showSlide(currentSlide + 1);
+  
+      }
   
     }
   
-    else if (currentSlide > 26) {
+    else if (difference < -20) {
   
-      showSlide(currentSlide - 1);
+      if (currentSlide >= 26 && currentSlide <= 32) {
+  
+        if (currentSlide > 26) {
+          showSlide(currentSlide - 1);
+        }
+  
+      }
+  
+      else {
+  
+        showSlide(currentSlide - 1);
+  
+      }
   
     }
   
