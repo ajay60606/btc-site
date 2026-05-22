@@ -26,7 +26,8 @@ function showSlide(index) {
 
   if (currentSlide === 26 && index === 25) return;
 
-if (currentSlide === 32 && index === 34) return;
+if (currentSlide === 32 && index === 33) return;
+if (currentSlide === 25 && index === 26) return;
 
   isAnimating = true;
 
