@@ -15,6 +15,7 @@ function showSlide(index) {
   slides[currentSlide].classList.remove("active");
 
   currentSlide = index;
+  localStorage.setItem("btc-slide", currentSlide);
 
   slides[currentSlide].classList.add("active");
 
