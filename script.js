@@ -5,7 +5,6 @@ const optionalSlides = document.querySelectorAll(".optional-slide");
 const optionalHotspot = document.querySelector(".optional-hotspot");
 optionalHotspot.addEventListener("click", () => {
 
-    console.log("clicked");
 
     inOptionalMode = true;
   
@@ -119,11 +118,45 @@ window.addEventListener("touchend", (event) => {
   let difference = touchStartY - touchEndY;
 
   if (difference > 20) {
-    showSlide(currentSlide + 1);
+    if (inOptionalMode) {
+
+        if (currentOptionalSlide < optionalSlides.length - 1) {
+      
+          optionalSlides[currentOptionalSlide].classList.remove("active");
+      
+          currentOptionalSlide++;
+      
+          optionalSlides[currentOptionalSlide].classList.add("active");
+        }
+      
+      }
+      
+      else {
+      
+        showSlide(currentSlide + 1);
+      
+      }
   }
 
   else if (difference < -20) {
-    showSlide(currentSlide - 1);
+    if (inOptionalMode) {
+
+        if (currentOptionalSlide > 0) {
+      
+          optionalSlides[currentOptionalSlide].classList.remove("active");
+      
+          currentOptionalSlide--;
+      
+          optionalSlides[currentOptionalSlide].classList.add("active");
+        }
+      
+      }
+      
+      else {
+      
+        showSlide(currentSlide - 1);
+      
+      }
   }
 
 });
