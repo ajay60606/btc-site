@@ -117,10 +117,10 @@ body {
 .optional-hotspot {
   position: absolute;
 
-  left: 32%;
-  top: 73%;
+  left: 50%;
+  top: 85%;
 
-  width: 16%;
+  width: 6%;
   height: 3%;
 
   background: rgba(255,0,0,0.25);
