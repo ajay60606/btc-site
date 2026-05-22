@@ -122,3 +122,9 @@ body {
 
   z-index: 20;
 }
+
+.slide-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
