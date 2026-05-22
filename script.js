@@ -16,24 +16,19 @@ function showSlide(index) {
   slides[currentSlide].classList.remove("active");
 
   currentSlide = index;
+  
+  if (currentSlide === 20) {
+    optionalHotspot.style.display = "block";
+  }
+  
+  else {
+    optionalHotspot.style.display = "none";
+  }
   const optionalHotspot = document.querySelector(".optional-hotspot");
 
-if (currentSlide === 20) {
-  optionalHotspot.style.display = "block";
-}
-
-else {
-  optionalHotspot.style.display = "none";
-}
 
 
-if (currentSlide === 20) {
-  optionalHotspot.style.display = "block";
-}
 
-else {
-  optionalHotspot.style.display = "none";
-}
   localStorage.setItem("btc-slide", currentSlide);
 
   slides[currentSlide].classList.add("active");
