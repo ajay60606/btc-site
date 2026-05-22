@@ -24,11 +24,20 @@ function showSlide(index) {
 
   if (index < 0 || index >= slides.length) return;
 
+  if (currentSlide === 27 && index === 26) return;
+
+if (currentSlide === 33 && index === 34) return;
+
   isAnimating = true;
 
   slides[currentSlide].classList.remove("active");
 
   currentSlide = index;
+  menuHotspot.style.display =
+  (currentSlide >= 27 && currentSlide <= 33)
+    ? "none"
+    : "block";
+
   console.log(currentSlide);
 
   if (currentSlide === 20) {
@@ -39,22 +48,15 @@ function showSlide(index) {
     optionalHotspot.style.display = "none";
   }
 
-  if (currentSlide >= 27 && currentSlide <= 33) {
-
-    menuHotspot.style.display = "none";
-  
-  }
-  
-  else {
-  
-    menuHotspot.style.display = "block";
-  
-  }
-
 
   localStorage.setItem("btc-slide", currentSlide);
 
   slides[currentSlide].classList.add("active");
+  menuHotspot.style.display =
+  (currentSlide >= 27 && currentSlide <= 33)
+    ? "none"
+    : "block";
+
   if (currentSlide >= 27 && currentSlide <= 33) {
 
     menuHotspot.style.display = "none";
