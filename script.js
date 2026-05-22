@@ -53,7 +53,7 @@ function showSlide(index) {
 
   localStorage.setItem("btc-slide", currentSlide);
 
-  slides[currentSlide].classList.add("active");
+  showSlide(currentSlide);
 
   setTimeout(() => {
     isAnimating = false;
