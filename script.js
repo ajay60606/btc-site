@@ -38,6 +38,18 @@ function showSlide(index) {
     optionalHotspot.style.display = "none";
   }
 
+  if (currentSlide >= 26) {
+
+    menuHotspot.style.display = "none";
+  
+  }
+  
+  else {
+  
+    menuHotspot.style.display = "block";
+  
+  }
+
 
   localStorage.setItem("btc-slide", currentSlide);
 
