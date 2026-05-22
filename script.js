@@ -18,6 +18,20 @@ let currentSlide = parseInt(localStorage.getItem("btc-slide")) || 0;
 let currentMenu = null;
 let isAnimating = false;
 
+function updateUIState() {
+
+    menuHotspot.style.display =
+      (currentSlide >= 26 && currentSlide <= 32)
+        ? "none"
+        : "block";
+  
+    optionalHotspot.style.display =
+      (currentSlide === 20)
+        ? "block"
+        : "none";
+  
+  }
+
 function showSlide(index) {
 
   if (isAnimating) return;
@@ -34,21 +48,7 @@ if (currentSlide === 25 && index === 26) return;
   slides[currentSlide].classList.remove("active");
 
   currentSlide = index;
-  menuHotspot.style.display =
-  (currentSlide >= 26 && currentSlide <= 32)
-    ? "none"
-    : "block";
-
-  console.log(currentSlide);
-
-  if (currentSlide === 20) {
-    optionalHotspot.style.display = "block";
-  }
-  
-  else {
-    optionalHotspot.style.display = "none";
-  }
-
+  updateUIState();
 
   localStorage.setItem("btc-slide", currentSlide);
 
@@ -61,18 +61,7 @@ if (currentSlide === 25 && index === 26) return;
     });
   
   }
-  
-  slides[currentSlide].classList.add("active");
-  menuHotspot.style.display =
-  (currentSlide >= 26 && currentSlide <= 32)
-    ? "none"
-    : "block";
 
-  if (currentSlide >= 26 && currentSlide <= 32) {
-
-    menuHotspot.style.display = "none";
-  
-  }
   
 
   setTimeout(() => {
@@ -99,6 +88,7 @@ function openMenu() {
   function closeMenu() {
 
     slides[currentSlide].classList.add("active");
+    updateUIState();
   
     currentMenu.classList.remove("active");
   
