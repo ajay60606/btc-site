@@ -4,6 +4,7 @@ const slides = document.querySelectorAll(".slide:not(.menu-slide)");
 const optionalHotspot = document.querySelector(".optional-hotspot");
 optionalHotspot.addEventListener("click", () => {
 
+    openingOptional = true;
     showSlide(26);
   
   });
@@ -17,6 +18,8 @@ let currentSlide = parseInt(localStorage.getItem("btc-slide")) || 0;
 
 let currentMenu = null;
 let isAnimating = false;
+let openingOptional = false;
+
 
 function updateUIState() {
 
@@ -55,8 +58,20 @@ if (currentSlide === 25 && index === 26) return;
   localStorage.setItem("btc-slide", currentSlide);
 
   
+  if (openingOptional && index === 26) {
 
+    slides[index].classList.add("optional-opening");
+  
+  }
   slides[currentSlide].classList.add("active");
+
+  setTimeout(() => {
+
+    slides[index].classList.remove("optional-opening");
+  
+    openingOptional = false;
+  
+  }, 600);
 
   
 

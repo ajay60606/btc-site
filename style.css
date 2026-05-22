@@ -151,3 +151,20 @@ z-index: 9999;
 
   transform: translateX(50%);
 }
+
+
+.optional-opening {
+  animation: optionalRise 0.5s ease;
+}
+
+@keyframes optionalRise {
+
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+
+}
