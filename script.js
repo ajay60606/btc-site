@@ -1,6 +1,6 @@
 const slides = document.querySelectorAll(".slide:not(.menu-slide)");
 
-let currentSlide = 0;
+let currentSlide = parseInt(localStorage.getItem("btc-slide")) || 0;
 let currentMenu = null;
 let isAnimating = false;
 
