@@ -154,13 +154,13 @@ z-index: 9999;
 
 
 .optional-opening {
-  animation: optionalRise 0.5s ease;
+  animation: optionalRise 0.5s ease-in-out;
 }
 
 @keyframes optionalRise {
 
   0% {
-    transform: translateX(8%);
+    transform: translateX(3%);
   }
 
   100% {
@@ -170,13 +170,13 @@ z-index: 9999;
 }
 
 .optional-closing {
-  animation: optionalClose 0.5s ease;
+  animation: optionalClose 0.5s ease-in-out;
 }
 
 @keyframes optionalClose {
 
   0% {
-    transform: translateX(-8%);
+    transform: translateX(-3%);
   }
 
   100% {
