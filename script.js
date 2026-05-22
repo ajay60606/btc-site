@@ -129,6 +129,16 @@ menuHotspot.addEventListener("click", () => {
 });
 
 const closeHotspot = document.querySelector(".close-hotspot");
+const optionalCloseHotspots = document.querySelectorAll(".optional-close-hotspot");
+optionalCloseHotspots.forEach(hotspot => {
+
+    hotspot.addEventListener("click", () => {
+  
+      showSlide(20);
+  
+    });
+  
+  });
 
 closeHotspot.addEventListener("click", () => {
   closeMenu();
