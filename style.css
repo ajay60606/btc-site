@@ -18,6 +18,7 @@ body {
 }
 
 .slide {
+  position: relative;
   position: absolute;
 
   width: 100%;
@@ -103,19 +104,17 @@ body {
 }
 
 .optional-hotspot {
-  position: fixed;
+  position: absolute;
 
-  left: 44%;
-  top: 85%;
+  left: 47%;
+  top: 73%;
 
-  width: 5.4%;
-  height: 3.2%;
+  width: 6%;
+  height: 3%;
 
   transform: translateX(-50%);
 
-  z-index: 4000;
-
-  display: none;
-
   background: rgba(255,0,0,0.25);
+
+  z-index: 4000;
 }
