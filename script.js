@@ -11,7 +11,11 @@ optionalHotspot.addEventListener("click", () => {
   
     slides[currentSlide].classList.remove("active");
   
-    optionalSlides[currentOptionalSlide].classList.add("active");
+    optionalSlides.forEach(slide => {
+        slide.classList.remove("active");
+      });
+      
+      optionalSlides[currentOptionalSlide].classList.add("active");
   
   });
 
