@@ -4,7 +4,7 @@ const slides = document.querySelectorAll(".slide:not(.menu-slide)");
 const optionalHotspot = document.querySelector(".optional-hotspot");
 optionalHotspot.addEventListener("click", () => {
 
-    showSlide(27);
+    showSlide(26);
   
   });
 
@@ -24,9 +24,9 @@ function showSlide(index) {
 
   if (index < 0 || index >= slides.length) return;
 
-  if (currentSlide === 27 && index === 26) return;
+  if (currentSlide === 26 && index === 25) return;
 
-if (currentSlide === 33 && index === 34) return;
+if (currentSlide === 32 && index === 34) return;
 
   isAnimating = true;
 
@@ -34,7 +34,7 @@ if (currentSlide === 33 && index === 34) return;
 
   currentSlide = index;
   menuHotspot.style.display =
-  (currentSlide >= 27 && currentSlide <= 33)
+  (currentSlide >= 26 && currentSlide <= 32)
     ? "none"
     : "block";
 
@@ -53,11 +53,11 @@ if (currentSlide === 33 && index === 34) return;
 
   slides[currentSlide].classList.add("active");
   menuHotspot.style.display =
-  (currentSlide >= 27 && currentSlide <= 33)
+  (currentSlide >= 26 && currentSlide <= 32)
     ? "none"
     : "block";
 
-  if (currentSlide >= 27 && currentSlide <= 33) {
+  if (currentSlide >= 26 && currentSlide <= 32) {
 
     menuHotspot.style.display = "none";
   
@@ -131,9 +131,9 @@ window.addEventListener("touchend", (event) => {
   
     if (difference > 20) {
   
-      if (currentSlide >= 27 && currentSlide <= 33) {
+      if (currentSlide >= 26 && currentSlide <= 32) {
   
-        if (currentSlide < 33) {
+        if (currentSlide < 32) {
           showSlide(currentSlide + 1);
         }
   
@@ -149,9 +149,9 @@ window.addEventListener("touchend", (event) => {
   
     else if (difference < -20) {
   
-      if (currentSlide >= 27 && currentSlide <= 33) {
+      if (currentSlide >= 26 && currentSlide <= 32) {
   
-        if (currentSlide > 27) {
+        if (currentSlide > 26) {
           showSlide(currentSlide - 1);
         }
   
