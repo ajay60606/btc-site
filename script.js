@@ -111,7 +111,7 @@ window.addEventListener("touchstart", (event) => {
 
 window.addEventListener("touchend", (event) => {
 
-  if (isAnimating) return;
+    if (isAnimating && !inOptionalMode) return;
 
   touchEndY = event.changedTouches[0].screenY;
 
