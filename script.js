@@ -180,7 +180,8 @@ optionalCloseHotspots.forEach(hotspot => {
 
     hotspot.addEventListener("click", () => {
   
-      showSlide(20);
+    
+        showSlide(20);
   
     });
   
