@@ -160,7 +160,7 @@ z-index: 9999;
 @keyframes optionalRise {
 
   0% {
-    transform: translateX(6%);
+    transform: translateX(3%);
   }
 
   100% {
