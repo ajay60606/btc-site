@@ -169,3 +169,16 @@ z-index: 9999;
 
 }
 
+.layer2-hotspot {
+  position: absolute;
+
+  left: 25%;
+  top: 85%;
+
+  width: 30%;
+  height: 3%;
+
+  background: rgba(0,255,0,0.25);
+
+  z-index: 9999;
+}

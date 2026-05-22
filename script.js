@@ -2,13 +2,19 @@ const slides = document.querySelectorAll(".slide:not(.menu-slide)");
 
 
 const optionalHotspot = document.querySelector(".optional-hotspot");
+const layer2Hotspot = document.querySelector(".layer2-hotspot");
 optionalHotspot.addEventListener("click", () => {
 
     openingOptional = true;
     showSlide(26);
   
   });
+  
+  layer2Hotspot.addEventListener("click", () => {
 
+    showSlide(33);
+  
+  });
 
 
 
