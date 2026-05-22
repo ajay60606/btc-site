@@ -159,11 +159,11 @@ z-index: 9999;
 
 @keyframes optionalRise {
 
-  from {
-    transform: translateY(100%);
+  0% {
+    transform: translateX(100%);
   }
 
-  to {
+  100% {
     transform: translateX(0%);
   }
 
@@ -175,11 +175,11 @@ z-index: 9999;
 
 @keyframes optionalClose {
 
-  from {
-    transform: translateY(-100%);
+  0% {
+    transform: translateX(-100%);
   }
 
-  to {
+  100% {
     transform: translateX(0%);
   }
 
