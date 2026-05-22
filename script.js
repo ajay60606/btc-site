@@ -4,7 +4,7 @@ const slides = document.querySelectorAll(".slide:not(.menu-slide)");
 const optionalHotspot = document.querySelector(".optional-hotspot");
 optionalHotspot.addEventListener("click", () => {
 
-    showSlide(26);
+    showSlide(27);
   
   });
 
@@ -39,7 +39,7 @@ function showSlide(index) {
     optionalHotspot.style.display = "none";
   }
 
-  if (currentSlide >= 26 && currentSlide <= 32) {
+  if (currentSlide >= 27 && currentSlide <= 33) {
 
     menuHotspot.style.display = "none";
   
@@ -55,7 +55,7 @@ function showSlide(index) {
   localStorage.setItem("btc-slide", currentSlide);
 
   slides[currentSlide].classList.add("active");
-  if (currentSlide >= 26 && currentSlide <= 32) {
+  if (currentSlide >= 27 && currentSlide <= 33) {
 
     menuHotspot.style.display = "none";
   
@@ -129,9 +129,9 @@ window.addEventListener("touchend", (event) => {
   
     if (difference > 20) {
   
-      if (currentSlide >= 26 && currentSlide <= 32) {
+      if (currentSlide >= 27 && currentSlide <= 33) {
   
-        if (currentSlide < 32) {
+        if (currentSlide < 33) {
           showSlide(currentSlide + 1);
         }
   
@@ -147,9 +147,9 @@ window.addEventListener("touchend", (event) => {
   
     else if (difference < -20) {
   
-      if (currentSlide >= 26 && currentSlide <= 32) {
+      if (currentSlide >= 27 && currentSlide <= 33) {
   
-        if (currentSlide > 26) {
+        if (currentSlide > 27) {
           showSlide(currentSlide - 1);
         }
   
