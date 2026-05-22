@@ -29,6 +29,7 @@ function showSlide(index) {
   slides[currentSlide].classList.remove("active");
 
   currentSlide = index;
+  console.log(currentSlide);
 
   if (currentSlide === 20) {
     optionalHotspot.style.display = "block";
