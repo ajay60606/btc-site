@@ -107,3 +107,20 @@ body {
 }
 
 
+.optional-hotspot {
+  position: fixed;
+
+  left: 50%;
+  top: 73%;
+
+  width: 6%;
+  height: 3%;
+
+  transform: translateX(-50%);
+
+  background: rgba(255,0,0,0.25);
+
+  z-index: 2000;
+
+  display: none;
+}
