@@ -202,3 +202,4 @@ closeHotspot.addEventListener("click", () => {
 });
 
 slides[currentSlide].classList.add("active");
+updateUIState();
