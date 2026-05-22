@@ -52,7 +52,7 @@ if (currentSlide === 25 && index === 26) return;
 
   localStorage.setItem("btc-slide", currentSlide);
 
-  if (currentSlide !== 26 && index === 26) {
+  if (previousSlide !== 26 && index === 26) {
 
     slides[index].style.transform = "translateY(100%)";
   
@@ -66,6 +66,8 @@ if (currentSlide === 25 && index === 26) return;
   
   }
 
+  slides[currentSlide].classList.add("active");
+
   
 
   setTimeout(() => {
@@ -74,6 +76,8 @@ if (currentSlide === 25 && index === 26) return;
 }
 
 function openMenu() {
+
+    const previousSlide = currentSlide;
 
     slides[currentSlide].classList.remove("active");
   
