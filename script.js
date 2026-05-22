@@ -127,6 +127,11 @@ window.addEventListener("touchend", (event) => {
           currentOptionalSlide++;
       
           optionalSlides[currentOptionalSlide].classList.add("active");
+          isAnimating = true;
+
+setTimeout(() => {
+  isAnimating = false;
+}, 900);
         }
       
       }
@@ -148,6 +153,11 @@ window.addEventListener("touchend", (event) => {
           currentOptionalSlide--;
       
           optionalSlides[currentOptionalSlide].classList.add("active");
+          isAnimating = true;
+
+setTimeout(() => {
+  isAnimating = false;
+}, 900);
         }
       
       }
