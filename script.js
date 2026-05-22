@@ -52,13 +52,17 @@ if (currentSlide === 25 && index === 26) return;
 
   localStorage.setItem("btc-slide", currentSlide);
 
-  if (currentSlide === 26 && index === 26) {
+  if (currentSlide !== 26 && index === 26) {
 
     slides[index].style.transform = "translateY(100%)";
   
     requestAnimationFrame(() => {
       slides[index].style.transform = "translateY(0%)";
     });
+  
+    setTimeout(() => {
+      slides[index].style.transform = "";
+    }, 500);
   
   }
 
