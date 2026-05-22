@@ -104,23 +104,24 @@ body {
   z-index: 3000;
 
   display: none;
+}a
+
+.slide-hotspot-layer {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 20;
 }
 
-
 .optional-hotspot {
-  position: fixed;
+  position: absolute;
 
-  left: 45%;
-  top: 85%;
+  left: 32%;
+  top: 73%;
 
-  width: 6%;
+  width: 16%;
   height: 3%;
 
-  transform: translateX(-50%);
-
   background: rgba(255,0,0,0.25);
-
-  z-index: 2000;
-
-  display: none;
 }
