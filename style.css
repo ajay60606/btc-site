@@ -164,7 +164,7 @@ z-index: 9999;
   }
 
   to {
-    transform: translateY(0%);
+    transform: translateX(0%);
   }
 
 }
@@ -180,7 +180,7 @@ z-index: 9999;
   }
 
   to {
-    transform: translateY(0%);
+    transform: translateX(0%);
   }
 
 }
