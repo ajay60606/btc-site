@@ -53,7 +53,18 @@ function showSlide(index) {
 
   localStorage.setItem("btc-slide", currentSlide);
 
-  showSlide(currentSlide);
+  slides[currentSlide].classList.add("active");
+  if (currentSlide >= 26) {
+
+    menuHotspot.style.display = "none";
+  
+  }
+  
+  else {
+  
+    menuHotspot.style.display = "block";
+  
+  }
 
   setTimeout(() => {
     isAnimating = false;
