@@ -1,7 +1,25 @@
 const slides = document.querySelectorAll(".slide:not(.menu-slide)");
+
+const optionalSlides = document.querySelectorAll(".optional-slide");
+
 const optionalHotspot = document.querySelector(".optional-hotspot");
+optionalHotspot.addEventListener("click", () => {
+
+    inOptionalMode = true;
+  
+    currentOptionalSlide = 0;
+  
+    slides[currentSlide].classList.remove("active");
+  
+    optionalSlides[currentOptionalSlide].classList.add("active");
+  
+  });
+
 
 let currentSlide = parseInt(localStorage.getItem("btc-slide")) || 0;
+let inOptionalMode = false;
+let currentOptionalSlide = 0;
+
 let currentMenu = null;
 let isAnimating = false;
 
