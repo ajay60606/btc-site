@@ -9,7 +9,7 @@ optionalHotspot.addEventListener("click", () => {
     showSlide(26);
   
   });
-  
+
   layer2Hotspot.addEventListener("click", () => {
 
     showSlide(33);
@@ -51,6 +51,13 @@ function showSlide(index) {
   if (currentSlide === 26 && index === 25) return;
 
 if (currentSlide === 32 && index === 33) return;
+if (currentSlide === 33 && index === 32) {
+
+    showSlide(25);
+  
+    return;
+  
+  }
 if (currentSlide === 25 && index === 26) return;
 
   isAnimating = true;
