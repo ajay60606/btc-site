@@ -104,3 +104,5 @@ const closeHotspot = document.querySelector(".close-hotspot");
 closeHotspot.addEventListener("click", () => {
   closeMenu();
 });
+
+slides[currentSlide].classList.add("active");
