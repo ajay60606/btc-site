@@ -105,10 +105,10 @@ body {
 .optional-hotspot {
   position: fixed;
 
-  left: 45%;
-  top: 84%;
+  left: 44%;
+  top: 85%;
 
-  width: 5.5%;
+  width: 5.4%;
   height: 3.2%;
 
   transform: translateX(-50%);
