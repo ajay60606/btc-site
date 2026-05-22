@@ -1,29 +1,19 @@
 const slides = document.querySelectorAll(".slide:not(.menu-slide)");
 
-const optionalSlides = document.querySelectorAll(".optional-slide");
 
 const optionalHotspot = document.querySelector(".optional-hotspot");
 optionalHotspot.addEventListener("click", () => {
 
-
-    inOptionalMode = true;
-  
-    currentOptionalSlide = 0;
-  
-    slides[currentSlide].classList.remove("active");
-  
-    optionalSlides.forEach(slide => {
-        slide.classList.remove("active");
-      });
-      
-      optionalSlides[currentOptionalSlide].classList.add("active");
+    showSlide(26);
   
   });
 
 
+
+
+
 let currentSlide = parseInt(localStorage.getItem("btc-slide")) || 0;
-let inOptionalMode = false;
-let currentOptionalSlide = 0;
+
 
 let currentMenu = null;
 let isAnimating = false;
@@ -101,11 +91,7 @@ window.addEventListener("wheel", (event) => {
   let touchStartY = 0;
 let touchEndY = 0;
 
-function showOptionalSlide(index) {
 
-    showOptionalSlide(0);
-  
-  }
 window.addEventListener("touchstart", (event) => {
 
 
@@ -116,47 +102,25 @@ window.addEventListener("touchstart", (event) => {
 
 window.addEventListener("touchend", (event) => {
 
-    if (isAnimating && !inOptionalMode) return;
-
-  touchEndY = event.changedTouches[0].screenY;
-
-  let difference = touchStartY - touchEndY;
-
-  if (difference > 20) {
-    if (inOptionalMode) {
-
-        if (currentOptionalSlide < optionalSlides.length - 1) {
-      
-            showOptionalSlide(currentOptionalSlide + 1);
-        }
-      
-      }
-      
-      else {
-      
-        showSlide(currentSlide + 1);
-      
-      }
-  }
-
-  else if (difference < -20) {
-    if (inOptionalMode) {
-
-        if (currentOptionalSlide > 0) {
-      
-            showOptionalSlide(currentOptionalSlide - 1);
-        }
-      
-      }
-      
-      else {
-      
-        showSlide(currentSlide - 1);
-      
-      }
-  }
-
-});
+    if (isAnimating) return;
+  
+    touchEndY = event.changedTouches[0].screenY;
+  
+    let difference = touchStartY - touchEndY;
+  
+    if (difference > 20) {
+  
+      showSlide(currentSlide + 1);
+  
+    }
+  
+    else if (difference < -20) {
+  
+      showSlide(currentSlide - 1);
+  
+    }
+  
+  });
 
 const menuHotspot = document.querySelector(".menu-hotspot");
 
