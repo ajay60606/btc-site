@@ -160,7 +160,7 @@ z-index: 9999;
 @keyframes optionalRise {
 
   0% {
-    transform: translateX(3%);
+    transform: translateX(6%);
   }
 
   100% {
@@ -176,7 +176,7 @@ z-index: 9999;
 @keyframes optionalClose {
 
   0% {
-    transform: translateX(-3%);
+    transform: translateX(-6%);
   }
 
   100% {
