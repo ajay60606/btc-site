@@ -45,6 +45,8 @@ if (currentSlide === 25 && index === 26) return;
 
   isAnimating = true;
 
+  const previousSlide = currentSlide;
+
   slides[previousSlide].classList.remove("active");
 
   currentSlide = index;
@@ -77,7 +79,7 @@ if (currentSlide === 25 && index === 26) return;
 
 function openMenu() {
 
-    const previousSlide = currentSlide;
+
 
     slides[currentSlide].classList.remove("active");
   
