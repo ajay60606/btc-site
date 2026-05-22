@@ -19,6 +19,7 @@ let currentSlide = parseInt(localStorage.getItem("btc-slide")) || 0;
 let currentMenu = null;
 let isAnimating = false;
 let openingOptional = false;
+let closingOptional = false;
 
 
 function updateUIState() {
@@ -63,6 +64,13 @@ if (currentSlide === 25 && index === 26) return;
     slides[index].classList.add("optional-opening");
   
   }
+
+  if (closingOptional && index === 20) {
+
+    slides[index].classList.add("optional-closing");
+  
+  }
+
   slides[currentSlide].classList.add("active");
 
   setTimeout(() => {
@@ -73,7 +81,13 @@ if (currentSlide === 25 && index === 26) return;
   
   }, 600);
 
+  setTimeout(() => {
+
+    slides[index].classList.remove("optional-closing");
   
+    closingOptional = false;
+  
+  }, 600);
 
   setTimeout(() => {
     isAnimating = false;
@@ -193,7 +207,7 @@ optionalCloseHotspots.forEach(hotspot => {
 
     hotspot.addEventListener("click", () => {
   
-    
+        closingOptional = true;
         showSlide(20);
   
     });
