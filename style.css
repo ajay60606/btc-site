@@ -151,3 +151,15 @@ z-index: 9999;
 
   transform: translateX(50%);
 }
+
+.optional-entry-slide {
+  transform: translateY(100%);
+
+  transition:
+    transform 0.5s ease,
+    opacity 1.1s ease;
+}
+
+.optional-entry-slide.active {
+  transform: translateY(0%);
+}

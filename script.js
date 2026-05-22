@@ -4,7 +4,21 @@ const slides = document.querySelectorAll(".slide:not(.menu-slide)");
 const optionalHotspot = document.querySelector(".optional-hotspot");
 optionalHotspot.addEventListener("click", () => {
 
-    showSlide(26);
+    if (isAnimating) return;
+  
+    isAnimating = true;
+  
+    slides[26].classList.add("active");
+  
+    currentSlide = 26;
+  
+    localStorage.setItem("btc-slide", currentSlide);
+  
+    menuHotspot.style.display = "none";
+  
+    setTimeout(() => {
+      isAnimating = false;
+    }, 500);
   
   });
 
