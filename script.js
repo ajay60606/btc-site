@@ -45,7 +45,7 @@ if (currentSlide === 25 && index === 26) return;
 
   isAnimating = true;
 
-  slides[currentSlide].classList.remove("active");
+  slides[previousSlide].classList.remove("active");
 
   currentSlide = index;
   updateUIState();
