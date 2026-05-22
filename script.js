@@ -5,6 +5,8 @@ const optionalSlides = document.querySelectorAll(".optional-slide");
 const optionalHotspot = document.querySelector(".optional-hotspot");
 optionalHotspot.addEventListener("click", () => {
 
+    console.log("clicked");
+
     inOptionalMode = true;
   
     currentOptionalSlide = 0;

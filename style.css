@@ -116,6 +116,8 @@ body {
 
 .optional-hotspot {
   position: absolute;
+  pointer-events: auto;
+z-index: 9999;
 
   left: 25%;
   top: 85%;
