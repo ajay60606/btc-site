@@ -1,5 +1,4 @@
 const slides = document.querySelectorAll(".slide:not(.menu-slide)");
-const optionalHotspot = document.querySelector(".optional-hotspot");
 
 let currentSlide = parseInt(localStorage.getItem("btc-slide")) || 0;
 let currentMenu = null;
@@ -16,14 +15,8 @@ function showSlide(index) {
   slides[currentSlide].classList.remove("active");
 
   currentSlide = index;
-  
-  if (currentSlide === 20) {
-    optionalHotspot.style.display = "block";
-  }
-  
-  else {
-    optionalHotspot.style.display = "none";
-  }
+
+
   const optionalHotspot = document.querySelector(".optional-hotspot");
 
 
