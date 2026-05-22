@@ -101,6 +101,11 @@ window.addEventListener("wheel", (event) => {
   let touchStartY = 0;
 let touchEndY = 0;
 
+function showOptionalSlide(index) {
+
+    showOptionalSlide(0);
+  
+  }
 window.addEventListener("touchstart", (event) => {
 
 
@@ -122,16 +127,7 @@ window.addEventListener("touchend", (event) => {
 
         if (currentOptionalSlide < optionalSlides.length - 1) {
       
-          optionalSlides[currentOptionalSlide].classList.remove("active");
-      
-          currentOptionalSlide++;
-      
-          optionalSlides[currentOptionalSlide].classList.add("active");
-          isAnimating = true;
-
-setTimeout(() => {
-  isAnimating = false;
-}, 900);
+            showOptionalSlide(currentOptionalSlide + 1);
         }
       
       }
@@ -148,16 +144,7 @@ setTimeout(() => {
 
         if (currentOptionalSlide > 0) {
       
-          optionalSlides[currentOptionalSlide].classList.remove("active");
-      
-          currentOptionalSlide--;
-      
-          optionalSlides[currentOptionalSlide].classList.add("active");
-          isAnimating = true;
-
-setTimeout(() => {
-  isAnimating = false;
-}, 900);
+            showOptionalSlide(currentOptionalSlide - 1);
         }
       
       }
