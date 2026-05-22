@@ -169,18 +169,3 @@ z-index: 9999;
 
 }
 
-.optional-closing {
-  animation: optionalClose 0.5s ease-in-out;
-}
-
-@keyframes optionalClose {
-
-  0% {
-    transform: translateX(-6%);
-  }
-
-  100% {
-    transform: translateX(0%);
-  }
-
-}

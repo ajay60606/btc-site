@@ -65,11 +65,7 @@ if (currentSlide === 25 && index === 26) return;
   
   }
 
-  if (closingOptional && index === 20) {
-
-    slides[index].classList.add("optional-closing");
   
-  }
 
   slides[currentSlide].classList.add("active");
 
@@ -81,13 +77,6 @@ if (currentSlide === 25 && index === 26) return;
   
   }, 600);
 
-  setTimeout(() => {
-
-    slides[index].classList.remove("optional-closing");
-  
-    closingOptional = false;
-  
-  }, 600);
 
   setTimeout(() => {
     isAnimating = false;
@@ -207,7 +196,7 @@ optionalCloseHotspots.forEach(hotspot => {
 
     hotspot.addEventListener("click", () => {
   
-        closingOptional = true;
+        
         showSlide(20);
   
     });
