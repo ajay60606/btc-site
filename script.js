@@ -72,6 +72,7 @@ function showSlide(index) {
   if (isAnimating) return;
 
   if (index < 0 || index >= slides.length) return;
+  if (index === currentSlide) return;
 
   const currentLayer =
   slides[currentSlide].dataset.layer;
