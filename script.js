@@ -414,5 +414,80 @@ slides[currentSlide].classList.add("active");
 updateUIState();
 
 window.addEventListener("keydown", (event) => {
+    if (isAnimating) return;
+
+const currentLayer =
+  slides[currentSlide].dataset.layer;
+
+  if (
+  event.key === "ArrowDown"
+) {
+
+  const nextSlide =
+    currentSlide + 1;
+
+  const nextLayer =
+    slides[nextSlide]?.dataset.layer;
+
+  if (
+    currentLayer === "source"
+  ) {
+
+    return;
+
+  }
+
+  if (
+    currentLayer === "layer2" &&
+    nextLayer === "source"
+  ) {
+
+    return;
+
+  }
+
+  if (
+    currentLayer === "optional1" &&
+    nextLayer !== "optional1"
+  ) {
+
+    return;
+
+  }
+
+  showSlide(nextSlide);
+
+}
+
+else if (
+    event.key === "ArrowUp"
+  ) {
+  
+    const previousSlide =
+      currentSlide - 1;
+  
+    const previousLayer =
+      slides[previousSlide]?.dataset.layer;
+  
+    if (
+      currentLayer === "source"
+    ) {
+  
+      return;
+  
+    }
+  
+    if (
+      currentLayer === "optional1" &&
+      previousLayer !== "optional1"
+    ) {
+  
+      return;
+  
+    }
+  
+    showSlide(previousSlide);
+  
+  }
 
 });
