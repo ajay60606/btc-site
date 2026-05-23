@@ -91,6 +91,16 @@ const targetLayer =
     targetLayer === "optional1"
   ) return;
 
+  if (
+    currentLayer === "layer2" &&
+    targetLayer === "source"
+  ) return;
+  
+  if (
+    currentLayer === "source" &&
+    targetLayer === "layer2"
+  ) return;
+
 
 if (currentSlide === 25 && index === 26) return;
 
