@@ -176,6 +176,15 @@ window.addEventListener("wheel", (event) => {
         slides[nextSlide]?.dataset.layer;
 
         if (
+            currentLayer === "layer2" &&
+            nextLayer === "source"
+          ) {
+          
+            return;
+          
+          }
+
+        if (
             currentLayer === "source"
           ) {
           
