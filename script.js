@@ -369,6 +369,10 @@ menuNavigationHotspots.forEach(hotspot => {
 
 const closeHotspot = document.querySelector(".close-hotspot");
 const optionalCloseHotspots = document.querySelectorAll(".optional-close-hotspot");
+const optionalContinueHotspot =
+  document.querySelector(
+    ".optional-continue-hotspot"
+  );
 optionalCloseHotspots.forEach(hotspot => {
 
     hotspot.addEventListener("click", () => {
@@ -380,6 +384,20 @@ optionalCloseHotspots.forEach(hotspot => {
             slide.dataset.entry ===
             "optional1-trigger"
         );
+
+        optionalContinueHotspot
+  .addEventListener("click", () => {
+
+    const continueTarget =
+      [...slides].findIndex(
+        slide =>
+          slide.dataset.entry ===
+          "post-optional-main"
+      );
+
+    showSlide(continueTarget);
+
+  });
 
 showSlide(returnTarget);
   
