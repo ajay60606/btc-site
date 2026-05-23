@@ -79,10 +79,7 @@ function showSlide(index) {
 const targetLayer =
   slides[index].dataset.layer;
 
-  if (
-    currentLayer === "optional1" &&
-    targetLayer === "layer1"
-  ) return;
+
 
   if (
     currentLayer === "optional1" &&
