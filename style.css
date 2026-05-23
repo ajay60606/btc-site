@@ -210,3 +210,17 @@ z-index: 9999;
 
   z-index: 9999;
 }
+
+.menu-source-hotspot {
+  position: absolute;
+
+  left: 25%;
+  top: 60%;
+
+  width: 50%;
+  height: 8%;
+
+  background: rgba(255,0,0,0.25);
+
+  z-index: 9999;
+}
