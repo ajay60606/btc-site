@@ -102,13 +102,23 @@ function openMenu() {
 
     slides[currentSlide].classList.remove("active");
   
-    if (currentSlide <= 4) {
-      currentMenu = document.querySelectorAll(".menu-slide")[0];
-    }
-  
-    else {
-      currentMenu = document.querySelectorAll(".menu-slide")[1];
-    }
+    if (currentSlide <= 25) {
+
+        currentMenu = document.querySelectorAll(".menu-slide")[0];
+      
+      }
+      
+      else if (currentSlide >= 33 && currentSlide <= 65) {
+      
+        currentMenu = document.querySelectorAll(".menu-slide")[1];
+      
+      }
+      
+      else if (currentSlide === 66) {
+      
+        currentMenu = document.querySelectorAll(".menu-slide")[2];
+      
+      }
   
     currentMenu.classList.add("active");
     document.querySelector(".close-hotspot").style.display = "block";
