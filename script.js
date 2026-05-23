@@ -6,10 +6,14 @@ const layer2Hotspot = document.querySelector(".layer2-hotspot");
 optionalHotspot.addEventListener("click", () => {
 
     openingOptional = true;
-    const optionalTarget =
+
+    const targetLayer =
+  optionalHotspot.dataset.target;
+
+const optionalTarget =
   [...slides].findIndex(
     slide =>
-      slide.dataset.layer === "optional1"
+      slide.dataset.layer === targetLayer
   );
 
 showSlide(optionalTarget);
@@ -18,11 +22,14 @@ showSlide(optionalTarget);
 
   layer2Hotspot.addEventListener("click", () => {
 
-    const layer2Target =
-  [...slides].findIndex(
-    slide =>
-      slide.dataset.layer === "layer2"
-  );
+    const targetLayer =
+    layer2Hotspot.dataset.target;
+  
+  const layer2Target =
+    [...slides].findIndex(
+      slide =>
+        slide.dataset.layer === targetLayer
+    );
 
 showSlide(layer2Target);
   
@@ -205,154 +212,38 @@ window.addEventListener("wheel", (event) => {
   });
 
 const menuHotspot = document.querySelector(".menu-hotspot");
-const menuLayer1Hotspot = document.querySelector(".menu-layer1-hotspot");
-const menuLayer2Hotspot = document.querySelector(".menu-layer2-hotspot");
-const menuSourceHotspot = document.querySelector(".menu-source-hotspot");
 
-const menu2Layer1Hotspot = document.querySelector(".menu2-layer1-hotspot");
-
-const menu2Layer2Hotspot = document.querySelector(".menu2-layer2-hotspot");
-
-const menu2SourceHotspot = document.querySelector(".menu2-source-hotspot");
-
-
-
-const menusLayer1Hotspot = document.querySelector(".menus-layer1-hotspot");
-
-const menusLayer2Hotspot = document.querySelector(".menus-layer2-hotspot");
-
-const menusSourceHotspot = document.querySelector(".menus-source-hotspot");
+const menuNavigationHotspots =
+  document.querySelectorAll(
+    "[data-target]"
+  );
 
 menuHotspot.addEventListener("click", () => {
   openMenu();
 });
 
-menuLayer1Hotspot.addEventListener("click", () => {
+menuNavigationHotspots.forEach(hotspot => {
 
-    closeMenu();
+    hotspot.addEventListener("click", () => {
   
-    const layer1Target =
-  [...slides].findIndex(
-    slide =>
-      slide.dataset.layer === "layer1"
-  );
-
-showSlide(layer1Target);
+      closeMenu();
   
-  });
-
-  menuLayer2Hotspot.addEventListener("click", () => {
-
-    closeMenu();
+      const targetLayer =
+        hotspot.dataset.target;
   
-    const layer2Target =
-    [...slides].findIndex(
-      slide =>
-        slide.dataset.layer === "layer2"
-    );
+      const targetSlide =
+        [...slides].findIndex(
+          slide =>
+            slide.dataset.layer === targetLayer
+        );
   
-  showSlide(layer2Target);
+      showSlide(targetSlide);
   
-  });
-
-  menuSourceHotspot.addEventListener("click", () => {
-
-    closeMenu();
-  
-    const sourceTarget =
-  [...slides].findIndex(
-    slide =>
-      slide.dataset.layer === "source"
-  );
-
-showSlide(sourceTarget);
-  
-  });
-
-  menu2Layer1Hotspot.addEventListener("click", () => {
-
-    closeMenu();
-  
-    const layer1Target =
-  [...slides].findIndex(
-    slide =>
-      slide.dataset.layer === "layer1"
-  );
-
-showSlide(layer1Target);
-  
-  });
-  
-  menu2Layer2Hotspot.addEventListener("click", () => {
-  
-    closeMenu();
-  
-    const layer2Target =
-  [...slides].findIndex(
-    slide =>
-      slide.dataset.layer === "layer2"
-  );
-
-showSlide(layer2Target);
-  
-  });
-  
-  menu2SourceHotspot.addEventListener("click", () => {
-  
-    closeMenu();
-  
-    const sourceTarget =
-  [...slides].findIndex(
-    slide =>
-      slide.dataset.layer === "source"
-  );
-
-showSlide(sourceTarget);
+    });
   
   });
 
 
-  menusLayer1Hotspot.addEventListener("click", () => {
-
-    closeMenu();
-  
-    const layer1Target =
-  [...slides].findIndex(
-    slide =>
-      slide.dataset.layer === "layer1"
-  );
-
-showSlide(layer1Target);
-  
-  });
-  
-  menusLayer2Hotspot.addEventListener("click", () => {
-  
-    closeMenu();
-  
-    const layer2Target =
-  [...slides].findIndex(
-    slide =>
-      slide.dataset.layer === "layer2"
-  );
-
-showSlide(layer2Target);
-  
-  });
-  
-  menusSourceHotspot.addEventListener("click", () => {
-  
-    closeMenu();
-  
-    const sourceTarget =
-  [...slides].findIndex(
-    slide =>
-      slide.dataset.layer === "source"
-  );
-
-showSlide(sourceTarget);
-  
-  });
 
 const closeHotspot = document.querySelector(".close-hotspot");
 const optionalCloseHotspots = document.querySelectorAll(".optional-close-hotspot");
@@ -362,10 +253,11 @@ optionalCloseHotspots.forEach(hotspot => {
   
         
         const returnTarget =
-  [...slides].findIndex(
-    slide =>
-      slide.querySelector(".optional-hotspot")
-  );
+        [...slides].findIndex(
+          slide =>
+            slide.dataset.entry ===
+            "optional1-trigger"
+        );
 
 showSlide(returnTarget);
   
