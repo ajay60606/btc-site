@@ -209,6 +209,7 @@ window.addEventListener("touchend", (event) => {
 
 const menuHotspot = document.querySelector(".menu-hotspot");
 const menuLayer1Hotspot = document.querySelector(".menu-layer1-hotspot");
+const menuLayer2Hotspot = document.querySelector(".menu-layer2-hotspot");
 
 menuHotspot.addEventListener("click", () => {
   openMenu();
@@ -219,6 +220,14 @@ menuLayer1Hotspot.addEventListener("click", () => {
     closeMenu();
   
     showSlide(0);
+  
+  });
+
+  menuLayer2Hotspot.addEventListener("click", () => {
+
+    closeMenu();
+  
+    showSlide(33);
   
   });
 
