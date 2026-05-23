@@ -208,10 +208,19 @@ window.addEventListener("touchend", (event) => {
   });
 
 const menuHotspot = document.querySelector(".menu-hotspot");
+const menuLayer1Hotspot = document.querySelector(".menu-layer1-hotspot");
 
 menuHotspot.addEventListener("click", () => {
   openMenu();
 });
+
+menuLayer1Hotspot.addEventListener("click", () => {
+
+    closeMenu();
+  
+    showSlide(0);
+  
+  });
 
 const closeHotspot = document.querySelector(".close-hotspot");
 const optionalCloseHotspots = document.querySelectorAll(".optional-close-hotspot");
