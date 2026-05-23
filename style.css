@@ -362,3 +362,32 @@ z-index: 9999;
 
   z-index: 9999;
 }
+
+
+.menu-hotspot,
+.close-hotspot,
+
+.optional-hotspot,
+.optional-close-hotspot,
+.optional-continue-hotspot,
+
+.layer2-hotspot,
+
+.menu-layer1-hotspot,
+.menu-layer2-hotspot,
+.menu-source-hotspot,
+
+.menu2-layer1-hotspot,
+.menu2-layer2-hotspot,
+.menu2-source-hotspot,
+
+.menus-layer1-hotspot,
+.menus-layer2-hotspot,
+.menus-source-hotspot,
+
+.amazon-hotspot,
+.email-hotspot {
+
+  cursor: pointer;
+
+}
