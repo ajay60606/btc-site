@@ -172,6 +172,14 @@ window.addEventListener("wheel", (event) => {
     
       const nextLayer =
         slides[nextSlide]?.dataset.layer;
+
+        if (
+            currentLayer === "source"
+          ) {
+          
+            return;
+          
+          }
     
       if (
         currentLayer === "optional1" &&
@@ -192,6 +200,14 @@ window.addEventListener("wheel", (event) => {
     
       const previousLayer =
         slides[previousSlide]?.dataset.layer;
+
+        if (
+            currentLayer === "source"
+          ) {
+          
+            return;
+          
+          }
     
       if (
         currentLayer === "optional1" &&
