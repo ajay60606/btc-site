@@ -102,12 +102,20 @@ if (currentSlide === 25 && index === 26) return;
 
  
 
-  slides[previousSlide].classList.remove("active");
-
   currentSlide = index;
-  updateUIState();
 
-  localStorage.setItem("btc-slide", currentSlide);
+slides[currentSlide].classList.add("active");
+
+requestAnimationFrame(() => {
+
+  slides[previousSlide]
+    .classList.remove("active");
+
+});
+
+updateUIState();
+
+localStorage.setItem("btc-slide", currentSlide);
 
   
   if (openingOptional && index === 26) {
@@ -116,9 +124,9 @@ if (currentSlide === 25 && index === 26) return;
   
   }
 
-  
 
-  slides[currentSlide].classList.add("active");
+
+
 
   setTimeout(() => {
 
