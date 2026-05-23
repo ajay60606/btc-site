@@ -161,6 +161,96 @@ currentMenu = document.querySelector(
     document.querySelector(".close-hotspot").style.display = "none";
   }
 
+  let touchStartY = 0;
+  let touchEndY = 0;
+
+  window.addEventListener("touchstart", (event) => {
+
+    touchStartY = event.changedTouches[0].screenY;
+  
+  });
+
+  window.addEventListener("touchend", (event) => {
+
+    if (isAnimating) return;
+  
+    touchEndY =
+      event.changedTouches[0].screenY;
+  
+    const swipeDistance =
+      touchStartY - touchEndY;
+
+      const currentLayer =
+  slides[currentSlide].dataset.layer;
+
+  if (swipeDistance > 50) {
+
+    const nextSlide = currentSlide + 1;
+  
+    const nextLayer =
+      slides[nextSlide]?.dataset.layer;
+  
+    if (
+      currentLayer === "source"
+    ) {
+  
+      return;
+  
+    }
+  
+    if (
+      currentLayer === "layer2" &&
+      nextLayer === "source"
+    ) {
+  
+      return;
+  
+    }
+  
+    if (
+      currentLayer === "optional1" &&
+      nextLayer !== "optional1"
+    ) {
+  
+      return;
+  
+    }
+  
+    showSlide(nextSlide);
+  
+  }
+
+  else if (swipeDistance < -50) {
+
+    const previousSlide =
+      currentSlide - 1;
+  
+    const previousLayer =
+      slides[previousSlide]?.dataset.layer;
+  
+    if (
+      currentLayer === "source"
+    ) {
+  
+      return;
+  
+    }
+  
+    if (
+      currentLayer === "optional1" &&
+      previousLayer !== "optional1"
+    ) {
+  
+      return;
+  
+    }
+  
+    showSlide(previousSlide);
+  
+  }
+  
+  });
+
 window.addEventListener("wheel", (event) => {
 
     if (isAnimating) return;
