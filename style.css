@@ -168,11 +168,13 @@ z-index: 9999;
 @keyframes optionalRise {
 
   0% {
-    transform: translateX(3%);
+    transform: translateY(14%);
+    opacity: 0;
   }
 
   100% {
-    transform: translateX(0%);
+    transform: translateY(0%);
+    opacity: 1;
   }
 
 }
