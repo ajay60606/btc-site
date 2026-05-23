@@ -124,6 +124,42 @@ body {
   z-index: 20;
 }
 
+.source-hotspot-layer {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 20;
+}
+
+.amazon-hotspot {
+  position: absolute;
+
+  left: 25%;
+  top: 40%;
+
+  width: 50%;
+  height: 8%;
+
+  background: rgba(255,0,0,0.25);
+
+  z-index: 9999;
+}
+
+.email-hotspot {
+  position: absolute;
+
+  left: 25%;
+  top: 55%;
+
+  width: 50%;
+  height: 8%;
+
+  background: rgba(0,255,255,0.25);
+
+  z-index: 9999;
+}
+
 .optional-hotspot {
   position: absolute;
   pointer-events: auto;
