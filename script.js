@@ -212,6 +212,12 @@ const menuLayer1Hotspot = document.querySelector(".menu-layer1-hotspot");
 const menuLayer2Hotspot = document.querySelector(".menu-layer2-hotspot");
 const menuSourceHotspot = document.querySelector(".menu-source-hotspot");
 
+const menu2Layer1Hotspot = document.querySelector(".menu2-layer1-hotspot");
+
+const menu2Layer2Hotspot = document.querySelector(".menu2-layer2-hotspot");
+
+const menu2SourceHotspot = document.querySelector(".menu2-source-hotspot");
+
 menuHotspot.addEventListener("click", () => {
   openMenu();
 });
@@ -234,6 +240,30 @@ menuLayer1Hotspot.addEventListener("click", () => {
 
   menuSourceHotspot.addEventListener("click", () => {
 
+    closeMenu();
+  
+    showSlide(66);
+  
+  });
+
+  menu2Layer1Hotspot.addEventListener("click", () => {
+
+    closeMenu();
+  
+    showSlide(0);
+  
+  });
+  
+  menu2Layer2Hotspot.addEventListener("click", () => {
+  
+    closeMenu();
+  
+    showSlide(33);
+  
+  });
+  
+  menu2SourceHotspot.addEventListener("click", () => {
+  
     closeMenu();
   
     showSlide(66);
