@@ -66,6 +66,12 @@ function showSlide(index) {
 
   if (index < 0 || index >= slides.length) return;
 
+  const currentLayer =
+  slides[currentSlide].dataset.layer;
+
+const targetLayer =
+  slides[index].dataset.layer;
+
   if (
     currentLayer === "optional1" &&
     targetLayer === "layer1"
@@ -88,11 +94,7 @@ if (currentSlide === 25 && index === 26) return;
 
   const previousSlide = currentSlide;
 
-  const currentLayer =
-  slides[currentSlide].dataset.layer;
-
-const targetLayer =
-  slides[index].dataset.layer;
+ 
 
   slides[previousSlide].classList.remove("active");
 
