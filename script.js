@@ -385,6 +385,7 @@ const optionalContinueHotspot =
             "optional1-trigger"
         );
   
+        closingOptional = true;
       showSlide(returnTarget);
   
     });
