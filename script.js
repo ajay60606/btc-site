@@ -374,37 +374,36 @@ const optionalContinueHotspot =
   document.querySelector(
     ".optional-continue-hotspot"
   );
-optionalCloseHotspots.forEach(hotspot => {
+  optionalCloseHotspots.forEach(hotspot => {
 
     hotspot.addEventListener("click", () => {
   
-        
-        const returnTarget =
+      const returnTarget =
         [...slides].findIndex(
           slide =>
             slide.dataset.entry ===
             "optional1-trigger"
         );
-
-        optionalContinueHotspot
-  .addEventListener("click", () => {
-
-    const continueTarget =
-      [...slides].findIndex(
-        slide =>
-          slide.dataset.entry ===
-          "post-optional-main"
-      );
-
-    showSlide(continueTarget);
-
-  });
-
-showSlide(returnTarget);
+  
+      showSlide(returnTarget);
   
     });
   
   });
+  
+  optionalContinueHotspot
+    .addEventListener("click", () => {
+  
+      const continueTarget =
+        [...slides].findIndex(
+          slide =>
+            slide.dataset.entry ===
+            "post-optional-main"
+        );
+  
+      showSlide(continueTarget);
+  
+    });
 
 closeHotspot.addEventListener("click", () => {
   closeMenu();
