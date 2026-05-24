@@ -206,7 +206,7 @@ currentMenu = document.querySelector(
       const currentLayer =
   slides[currentSlide].dataset.layer;
 
-  if (swipeDistance > 50) {
+  if (swipeDistance > 30) {
 
     const nextSlide = currentSlide + 1;
   
@@ -243,7 +243,7 @@ currentMenu = document.querySelector(
   
   }
 
-  else if (swipeDistance < -50) {
+  else if (swipeDistance < -30) {
 
     const previousSlide =
       currentSlide - 1;
