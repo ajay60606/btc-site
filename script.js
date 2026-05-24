@@ -107,6 +107,13 @@ if (currentSlide === 25 && index === 26) return;
 
 slides[currentSlide].classList.add("active");
 
+if (closingOptional) {
+
+    slides[currentSlide]
+      .style.transition = "none";
+  
+  }
+
 requestAnimationFrame(() => {
 
   slides[previousSlide]
@@ -139,7 +146,14 @@ localStorage.setItem("btc-slide", currentSlide);
 
 
   setTimeout(() => {
+
+    slides[currentSlide]
+      .style.transition = "";
+  
+    closingOptional = false;
+  
     isAnimating = false;
+  
   }, 900);
 }
 
