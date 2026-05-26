@@ -95,7 +95,7 @@ const targetLayer =
 
 
 
-if (currentSlide === 25 && index === 26) return;
+
 
   isAnimating = true;
 
