@@ -245,6 +245,15 @@ currentMenu = document.querySelector(
       return;
   
     }
+
+    if (
+      currentLayer === "layer1" &&
+      nextLayer === "optional1"
+    ) {
+    
+      return;
+    
+    }
   
     showSlide(nextSlide);
   
@@ -319,6 +328,15 @@ window.addEventListener("wheel", (event) => {
     
         return;
     
+      }
+
+      if (
+        currentLayer === "layer1" &&
+        nextLayer === "optional1"
+      ) {
+      
+        return;
+      
       }
     
       showSlide(nextSlide);
@@ -474,6 +492,15 @@ const currentLayer =
 
     return;
 
+  }
+
+  if (
+    currentLayer === "layer1" &&
+    nextLayer === "optional1"
+  ) {
+  
+    return;
+  
   }
 
   showSlide(nextSlide);
