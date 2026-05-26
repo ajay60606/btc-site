@@ -435,3 +435,18 @@ z-index: 9999;
   }
 
 }
+
+
+@media (max-width: 768px) {
+
+  .optional-close-hotspot {
+
+    top: 3%;
+    left: 84%;
+
+    width: 12%;
+    height: 8%;
+
+  }
+
+}
