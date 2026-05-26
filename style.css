@@ -441,10 +441,10 @@ z-index: 9999;
 
   .optional-close-hotspot {
 
-    top: 3%;
-    left: 84%;
+    top: 0%;
+    left: 80%;
 
-    width: 12%;
+    width: 15%;
     height: 8%;
 
   }
