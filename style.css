@@ -457,11 +457,13 @@ z-index: 9999;
 
   .optional-continue-hotspot {
 
-    top: ...;
-    left: ...;
+    top: 81%;
+    left: 12%;
 
-    width: ...;
-    height: ...;
+    width: 80%;
+    height: 14%;
+
+   
 
   }
 
