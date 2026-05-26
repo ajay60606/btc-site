@@ -2,6 +2,24 @@ const slides = document.querySelectorAll(".slide:not(.menu-slide)");
 
 
 const optionalHotspot = document.querySelector(".optional-hotspot");
+optionalHotspot.addEventListener("click", () => {
+
+  openingOptional = true;
+
+  const targetLayer =
+    optionalHotspot.dataset.target;
+
+  const optionalTarget =
+    [...slides].findIndex(
+      slide =>
+        slide.dataset.layer === targetLayer
+    );
+
+  showSlide(optionalTarget);
+
+});
+
+
 const layer2Hotspots =
   document.querySelectorAll(".layer2-hotspot");
 
