@@ -419,3 +419,16 @@ z-index: 9999;
   height: 100%;
 
 }
+
+@media (max-width: 768px) {
+
+  .hotspot-23 {
+
+    top: 78%;
+    left: 35%;
+    width: 30%;
+    height: 8%;
+
+  }
+
+}
