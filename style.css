@@ -469,3 +469,20 @@ z-index: 9999;
   }
 
 }
+
+@media (max-width: 768px) {
+
+  .layer2-hotspot {
+
+    bottom: 0%;
+
+    left: 48%;
+
+    width: 60%;
+    height: 9%;
+
+    background: transparent;
+
+  }
+
+}
