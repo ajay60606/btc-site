@@ -59,6 +59,18 @@ body {
   border-radius: 6px;
 }
 
+.image-wrapper img {
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+}
+
+
 body {
   touch-action: none;
 }
@@ -110,11 +122,16 @@ body {
 }
 
 .slide-hotspot-layer {
+
   position: absolute;
 
   inset: 0;
 
-  z-index: 20;
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
 }
 
 .menu-hotspot-layer {
@@ -390,5 +407,17 @@ z-index: 9999;
 .email-hotspot {
 
   cursor: pointer;
+
+}
+
+
+.image-wrapper {
+
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
 
 }
