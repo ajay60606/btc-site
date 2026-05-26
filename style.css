@@ -452,3 +452,17 @@ z-index: 9999;
   }
 
 }
+
+@media (max-width: 768px) {
+
+  .optional-continue-hotspot {
+
+    top: ...;
+    left: ...;
+
+    width: ...;
+    height: ...;
+
+  }
+
+}
