@@ -2,38 +2,27 @@ const slides = document.querySelectorAll(".slide:not(.menu-slide)");
 
 
 const optionalHotspot = document.querySelector(".optional-hotspot");
-const layer2Hotspot = document.querySelector(".layer2-hotspot");
-optionalHotspot.addEventListener("click", () => {
+const layer2Hotspots =
+  document.querySelectorAll(".layer2-hotspot");
 
-    openingOptional = true;
+layer2Hotspots.forEach(hotspot => {
 
-    const targetLayer =
-  optionalHotspot.dataset.target;
-
-const optionalTarget =
-  [...slides].findIndex(
-    slide =>
-      slide.dataset.layer === targetLayer
-  );
-
-showSlide(optionalTarget);
-  
-  });
-
-  layer2Hotspot.addEventListener("click", () => {
+  hotspot.addEventListener("click", () => {
 
     const targetLayer =
-    layer2Hotspot.dataset.target;
-  
-  const layer2Target =
-    [...slides].findIndex(
-      slide =>
-        slide.dataset.layer === targetLayer
-    );
+      hotspot.dataset.target;
 
-showSlide(layer2Target);
-  
+    const layer2Target =
+      [...slides].findIndex(
+        slide =>
+          slide.dataset.layer === targetLayer
+      );
+
+    showSlide(layer2Target);
+
   });
+
+});
 
 
 
