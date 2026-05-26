@@ -244,6 +244,8 @@ z-index: 9999;
 .layer2-hotspot {
   position: absolute;
 
+  pointer-events: auto;
+
   left: 25%;
   top: 85%;
 
