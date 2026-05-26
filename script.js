@@ -359,7 +359,7 @@ const menuHotspot = document.querySelector(".menu-hotspot");
 
 const menuNavigationHotspots =
   document.querySelectorAll(
-    "[data-target]"
+    ".menu-hotspot-layer [data-target]"
   );
 
 menuHotspot.addEventListener("click", () => {
