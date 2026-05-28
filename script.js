@@ -72,6 +72,7 @@ let currentSlide = parseInt(localStorage.getItem("btc-slide")) || 0;
 
 let currentMenu = null;
 let isAnimating = false;
+let wheelLocked = false;
 let openingOptional = false;
 let closingOptional = false;
 
@@ -320,7 +321,15 @@ currentMenu = document.querySelector(
 
 window.addEventListener("wheel", (event) => {
 
-    if (isAnimating) return;
+  if (isAnimating || wheelLocked) return;
+
+  wheelLocked = true;
+  
+  setTimeout(() => {
+  
+    wheelLocked = false;
+  
+  }, 700);
 
     const currentLayer =
       slides[currentSlide].dataset.layer;
