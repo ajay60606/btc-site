@@ -178,7 +178,7 @@ localStorage.setItem("btc-slide", currentSlide);
   
     isAnimating = false;
   
-  }, 400);
+  }, 900);
 }
 
 function openMenu() {
