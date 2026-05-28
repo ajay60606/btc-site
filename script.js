@@ -318,77 +318,93 @@ currentMenu = document.querySelector(
   
   });
 
-window.addEventListener("wheel", (event) => {
-  event.preventDefault();
+  let wheelTriggered = false;
 
+  window.addEventListener("wheel", (event) => {
   
-
+    event.preventDefault();
+  
+    if (isAnimating) return;
+  
+    const direction =
+      Math.sign(event.deltaY);
+  
+    if (direction === 0) return;
+  
+    if (wheelTriggered) return;
+  
+    wheelTriggered = true;
+  
+    setTimeout(() => {
+  
+      wheelTriggered = false;
+  
+    }, 120);
+  
     const currentLayer =
       slides[currentSlide].dataset.layer;
-    
-    if (event.deltaY > 0) {
-    
-      const nextSlide = currentSlide + 1;
-    
+  
+    if (direction > 0) {
+  
+      const nextSlide =
+        currentSlide + 1;
+  
       const nextLayer =
         slides[nextSlide]?.dataset.layer;
-
-       
-    
+  
       if (
         currentLayer === "optional1" &&
         nextLayer !== "optional1"
       ) {
-    
+  
         return;
-    
+  
       }
-
+  
       if (
         currentLayer === "layer1" &&
         nextLayer === "optional1"
       ) {
-      
+  
         return;
-      
+  
       }
-
+  
       if (
         currentLayer === "layer2" &&
         nextLayer === "source"
       ) {
-      
+  
         return;
-      
+  
       }
-    
+  
       showSlide(nextSlide);
-    
+  
     }
-    
-    else if (event.deltaY < 0) {
-    
-      const previousSlide = currentSlide - 1;
-    
+  
+    else {
+  
+      const previousSlide =
+        currentSlide - 1;
+  
       const previousLayer =
         slides[previousSlide]?.dataset.layer;
-
-       
-    
+  
       if (
         currentLayer === "optional1" &&
         previousLayer !== "optional1"
       ) {
-    
+  
         return;
-    
+  
       }
-
+  
       if (
         currentLayer === "layer2" &&
         previousLayer === "optional1"
       ) {
-      
+  
         const lastLayer1 =
           [...slides]
             .map((slide, i) =>
@@ -398,17 +414,16 @@ window.addEventListener("wheel", (event) => {
             )
             .filter(i => i !== -1)
             .pop();
-      
+  
         showSlide(lastLayer1);
-      
+  
         return;
-      
+  
       }
-    
+  
       showSlide(previousSlide);
-    
+  
     }
-    
   
   }, { passive: false });
 
