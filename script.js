@@ -250,6 +250,15 @@ currentMenu = document.querySelector(
       return;
     
     }
+
+    if (
+      currentLayer === "layer2" &&
+      nextLayer === "source"
+    ) {
+    
+      return;
+    
+    }
   
     showSlide(nextSlide);
   
@@ -330,6 +339,15 @@ window.addEventListener("wheel", (event) => {
       if (
         currentLayer === "layer1" &&
         nextLayer === "optional1"
+      ) {
+      
+        return;
+      
+      }
+
+      if (
+        currentLayer === "layer2" &&
+        nextLayer === "source"
       ) {
       
         return;
@@ -494,6 +512,15 @@ const currentLayer =
   if (
     currentLayer === "layer1" &&
     nextLayer === "optional1"
+  ) {
+  
+    return;
+  
+  }
+
+  if (
+    currentLayer === "layer2" &&
+    nextLayer === "source"
   ) {
   
     return;
