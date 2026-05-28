@@ -559,7 +559,7 @@ z-index: 9999;
     width: 64%;
     height: 9%;
 
-    background: rgba(0,255,0,0.35);
+    background: transparent;
 
   }
 
@@ -572,7 +572,7 @@ z-index: 9999;
   .menus-source-hotspot {
 
     left: 18%;
-    top: 54%;
+    top: 48%;
 
     width: 64%;
     height: 10%;
