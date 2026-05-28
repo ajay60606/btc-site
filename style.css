@@ -197,14 +197,6 @@ z-index: 9999;
 .optional-close-hotspot {
   position: absolute;
 
-  top: 3%;
-  right: 30%;
-
-  width: 34%;
-  height: 5%;
-
-  background: rgba(255,0,0,0.25);
-
   z-index: 100;
 }
 
@@ -648,7 +640,8 @@ z-index: 9999;
 
 @media (min-width: 769px) {
 
-  .optional-hotspot {
+  
+  .hotspot-23 {
 
     top: 84%;
     left: 45%;
