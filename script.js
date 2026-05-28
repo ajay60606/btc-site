@@ -324,6 +324,7 @@ currentMenu = document.querySelector(
   window.addEventListener("wheel", (event) => {
   
     event.preventDefault();
+    event.stopImmediatePropagation();
   
     if (wheelAnimating) return;
 
