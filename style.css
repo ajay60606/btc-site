@@ -550,7 +550,7 @@ body {
     width: 7%;
     height: 6%;
 
-    background: rgba(0,255,0,0.25);
+    background: transparent;
 
   }
 
@@ -566,7 +566,7 @@ body {
     width: 5%;
     height: 7%;
 
-    background: rgba(255,0,0,0.25);
+    background: transparent;
 
   }
 
@@ -583,7 +583,7 @@ body {
     width: 22%;
     height: 7%;
 
-    background: rgba(0,255,255,0.25);
+    background: transparent;
 
   }
 
@@ -600,7 +600,7 @@ body {
     width: 22%;
     height: 7%;
 
-    background: rgba(0,255,0,0.25);
+    background: transparent;
 
   }
 
@@ -617,7 +617,7 @@ body {
     width: 22%;
     height: 7%;
 
-    background: rgba(255,255,0,0.25);
+    background: transparent;
 
   }
 
@@ -635,7 +635,7 @@ body {
     width: 22%;
     height: 6%;
 
-    background: rgba(0,0,255,0.25);
+    background: transparent;
 
   }
 
@@ -653,7 +653,7 @@ body {
     width: 22%;
     height: 6%;
 
-    background: rgba(0,255,0,0.25);
+    background: transparent;
 
   }
 
@@ -671,7 +671,7 @@ body {
     width: 22%;
     height: 6%;
 
-    background: rgba(255,0,0,0.25);
+    background: transparent;
 
   }
 
@@ -688,7 +688,7 @@ body {
     width: 22%;
     height: 8%;
 
-    background: rgba(255,255,255,0.25);
+    background: transparent;
 
   }
 
@@ -705,7 +705,7 @@ body {
     width: 22%;
     height: 8%;
 
-    background: rgba(255,0,0,0.25);
+    background: transparent;
 
   }
 
@@ -723,7 +723,7 @@ body {
     width: 22%;
     height: 8%;
 
-    background: rgba(0,255,255,0.25);
+    background: transparent;
 
   }
 
