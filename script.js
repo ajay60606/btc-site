@@ -273,6 +273,28 @@ currentMenu = document.querySelector(
       return;
   
     }
+
+
+    if (
+      currentLayer === "layer2" &&
+      previousLayer === "optional1"
+    ) {
+    
+      const lastLayer1 =
+        [...slides]
+          .map((slide, i) =>
+            slide.dataset.layer === "layer1"
+              ? i
+              : -1
+          )
+          .filter(i => i !== -1)
+          .pop();
+    
+      showSlide(lastLayer1);
+    
+      return;
+    
+    }
   
     showSlide(previousSlide);
   
@@ -334,6 +356,27 @@ window.addEventListener("wheel", (event) => {
     
         return;
     
+      }
+
+      if (
+        currentLayer === "layer2" &&
+        previousLayer === "optional1"
+      ) {
+      
+        const lastLayer1 =
+          [...slides]
+            .map((slide, i) =>
+              slide.dataset.layer === "layer1"
+                ? i
+                : -1
+            )
+            .filter(i => i !== -1)
+            .pop();
+      
+        showSlide(lastLayer1);
+      
+        return;
+      
       }
     
       showSlide(previousSlide);
@@ -480,6 +523,27 @@ else if (
   
       return;
   
+    }
+
+    if (
+      currentLayer === "layer2" &&
+      previousLayer === "optional1"
+    ) {
+    
+      const lastLayer1 =
+        [...slides]
+          .map((slide, i) =>
+            slide.dataset.layer === "layer1"
+              ? i
+              : -1
+          )
+          .filter(i => i !== -1)
+          .pop();
+    
+      showSlide(lastLayer1);
+    
+      return;
+    
     }
   
     showSlide(previousSlide);
