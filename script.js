@@ -339,7 +339,7 @@ currentMenu = document.querySelector(
   
       wheelTriggered = false;
   
-    }, 120);
+    }, 280);
   
     const currentLayer =
       slides[currentSlide].dataset.layer;
