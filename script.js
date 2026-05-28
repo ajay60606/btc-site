@@ -42,6 +42,28 @@ layer2Hotspots.forEach(hotspot => {
 
 });
 
+const sourceHotspots =
+  document.querySelectorAll(".source-hotspot");
+
+sourceHotspots.forEach(hotspot => {
+
+  hotspot.addEventListener("click", () => {
+
+    const targetLayer =
+      hotspot.dataset.target;
+
+    const sourceTarget =
+      [...slides].findIndex(
+        slide =>
+          slide.dataset.layer === targetLayer
+      );
+
+    showSlide(sourceTarget);
+
+  });
+
+});
+
 
 
 

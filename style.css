@@ -490,3 +490,39 @@ z-index: 9999;
   }
 
 }
+
+.source-hotspot {
+  position: absolute;
+
+  pointer-events: auto;
+
+  bottom: 4%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 40%;
+  height: 6%;
+
+  background: rgba(255,255,0,0.25);
+
+  z-index: 9999;
+}
+
+
+@media (max-width: 768px) {
+
+  .source-hotspot {
+
+    top: auto;
+
+    bottom: 0%;
+
+    left: 48%;
+
+    width: 60%;
+    height: 9%;
+
+  }
+
+}
