@@ -196,6 +196,7 @@ z-index: 9999;
 
 .optional-close-hotspot {
   position: absolute;
+  pointer-events: auto;
 
   z-index: 100;
 }
