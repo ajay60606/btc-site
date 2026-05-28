@@ -335,7 +335,7 @@ window.addEventListener("wheel", (event) => {
     const currentLayer =
       slides[currentSlide].dataset.layer;
     
-    if (event.deltaY > 5) {
+    if (event.deltaY > 0) {
     
       const nextSlide = currentSlide + 1;
     
