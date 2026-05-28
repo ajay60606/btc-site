@@ -713,7 +713,7 @@ body {
   .amazon-hotspot {
 
     left: 39%;
-    top: 39%;
+    top: 41%;
 
     width: 22%;
     height: 8%;
@@ -729,7 +729,8 @@ body {
   .email-hotspot {
 
     left: 39%;
-    top: 53%;
+    
+    bottom: 5%;
 
     width: 22%;
     height: 8%;
