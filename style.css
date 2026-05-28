@@ -564,3 +564,21 @@ z-index: 9999;
   }
 
 }
+
+@media (max-width: 768px) {
+
+  .menu-source-hotspot,
+  .menu2-source-hotspot,
+  .menus-source-hotspot {
+
+    left: 18%;
+    top: 54%;
+
+    width: 64%;
+    height: 10%;
+
+    background: rgba(255,255,0,0.35);
+
+  }
+
+}
