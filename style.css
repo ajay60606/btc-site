@@ -577,7 +577,23 @@ z-index: 9999;
     width: 64%;
     height: 10%;
 
-    background: rgba(255,255,0,0.35);
+    background: transparent;
+
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .amazon-hotspot {
+
+    left: 18%;
+    top: 34%;
+
+    width: 64%;
+    height: 10%;
+
+    background: rgba(255,0,0,0.35);
 
   }
 
