@@ -72,6 +72,7 @@ let currentSlide = parseInt(localStorage.getItem("btc-slide")) || 0;
 
 let currentMenu = null;
 let isAnimating = false;
+let wheelAnimating = false;
 let openingOptional = false;
 let closingOptional = false;
 
@@ -324,7 +325,15 @@ currentMenu = document.querySelector(
   
     event.preventDefault();
   
-    if (isAnimating) return;
+    if (wheelAnimating) return;
+
+wheelAnimating = true;
+
+setTimeout(() => {
+
+  wheelAnimating = false;
+
+}, 1100);
   
     const direction =
       Math.sign(event.deltaY);
