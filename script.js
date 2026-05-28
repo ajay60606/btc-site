@@ -324,7 +324,7 @@ currentMenu = document.querySelector(
 
   window.addEventListener("wheel", (event) => {
   
-    event.preventDefault();
+    
     if (isAnimating) return;
   
   
@@ -418,7 +418,7 @@ currentMenu = document.querySelector(
   
     }
   
-  }, { passive: false });
+  });
 
   
 
