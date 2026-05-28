@@ -72,7 +72,6 @@ let currentSlide = parseInt(localStorage.getItem("btc-slide")) || 0;
 
 let currentMenu = null;
 let isAnimating = false;
-let wheelLocked = false;
 let openingOptional = false;
 let closingOptional = false;
 
@@ -178,7 +177,7 @@ localStorage.setItem("btc-slide", currentSlide);
   
     isAnimating = false;
   
-  }, 900);
+  }, 400);
 }
 
 function openMenu() {
@@ -322,15 +321,7 @@ currentMenu = document.querySelector(
 window.addEventListener("wheel", (event) => {
   event.preventDefault();
 
-  if (isAnimating || wheelLocked) return;
-
-  wheelLocked = true;
   
-  setTimeout(() => {
-  
-    wheelLocked = false;
-  
-  }, 500);
 
     const currentLayer =
       slides[currentSlide].dataset.layer;
