@@ -528,3 +528,21 @@ z-index: 9999;
   }
 
 }
+
+@media (max-width: 768px) {
+
+  .menu-layer1-hotspot,
+  .menu2-layer1-hotspot,
+  .menus-layer1-hotspot {
+
+    left: 18%;
+    top: 24%;
+
+    width: 64%;
+    height: 10%;
+
+    background: rgba(255,0,0,0.35);
+
+  }
+
+}
