@@ -320,6 +320,7 @@ currentMenu = document.querySelector(
   });
 
 window.addEventListener("wheel", (event) => {
+  event.preventDefault();
 
   if (isAnimating || wheelLocked) return;
 
@@ -334,7 +335,7 @@ window.addEventListener("wheel", (event) => {
     const currentLayer =
       slides[currentSlide].dataset.layer;
     
-    if (event.deltaY > 0) {
+    if (event.deltaY > 5) {
     
       const nextSlide = currentSlide + 1;
     
@@ -416,8 +417,11 @@ window.addEventListener("wheel", (event) => {
       showSlide(previousSlide);
     
     }
+    
   
-  });
+  }, { passive: false });
+
+  
 
 const menuHotspot = document.querySelector(".menu-hotspot");
 
