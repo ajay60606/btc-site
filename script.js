@@ -319,7 +319,7 @@ currentMenu = document.querySelector(
   
   });
 
-  let wheelTriggered = false;
+  
 
   window.addEventListener("wheel", (event) => {
   
@@ -340,15 +340,7 @@ setTimeout(() => {
   
     if (direction === 0) return;
   
-    if (wheelTriggered) return;
-  
-    wheelTriggered = true;
-  
-    setTimeout(() => {
-  
-      wheelTriggered = false;
-  
-    }, 280);
+    
   
     const currentLayer =
       slides[currentSlide].dataset.layer;
