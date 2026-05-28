@@ -593,7 +593,23 @@ z-index: 9999;
     width: 64%;
     height: 10%;
 
-    background: rgba(255,0,0,0.35);
+    background: transparent;
+
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .email-hotspot {
+
+    left: 18%;
+    top: 50%;
+
+    width: 64%;
+    height: 10%;
+
+    background: rgba(0,255,255,0.35);
 
   }
 
