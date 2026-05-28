@@ -81,8 +81,15 @@ function updateUIState() {
     const currentLayer =
     slides[currentSlide].dataset.layer;
   
+    const menuDisabled =
+    slides[currentSlide]
+      .dataset.menuDisabled === "true";
+  
   menuHotspot.style.display =
-    (currentLayer === "optional1")
+    (
+      currentLayer === "optional1" ||
+      menuDisabled
+    )
       ? "none"
       : "block";
   
