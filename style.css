@@ -661,12 +661,29 @@ z-index: 9999;
   .optional-close-hotspot {
 
     top: 0%;
-    left: 60%;
+    left: 59%;
 
     width: 5%;
     height: 7%;
 
     background: rgba(255,0,0,0.25);
+
+  }
+
+}
+
+@media (min-width: 769px) {
+
+  .optional-continue-hotspot {
+
+    bottom: 3%;
+
+    left: 50%;
+
+    width: 22%;
+    height: 7%;
+
+    background: rgba(0,255,255,0.25);
 
   }
 
