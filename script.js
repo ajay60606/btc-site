@@ -111,19 +111,6 @@ const targetLayer =
 
 
 
-  if (
-    currentLayer === "optional1" &&
-    targetLayer === "layer2"
-  ) return;
-  
-  if (
-    currentLayer === "layer2" &&
-    targetLayer === "optional1"
-  ) return;
-
-
-
-
 
 
   isAnimating = true;
