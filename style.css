@@ -645,3 +645,19 @@ z-index: 9999;
   }
 
 }
+
+@media (min-width: 769px) {
+
+  .optional-hotspot {
+
+    top: 82%;
+    left: 50%;
+
+    width: 22%;
+    height: 8%;
+
+    transform: translateX(-50%);
+
+  }
+
+}
