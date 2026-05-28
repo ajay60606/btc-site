@@ -152,6 +152,7 @@ body {
 
 .amazon-hotspot {
   position: absolute;
+  pointer-events: auto;
 
   left: 25%;
   top: 40%;
@@ -166,6 +167,7 @@ body {
 
 .email-hotspot {
   position: absolute;
+  pointer-events: auto;
 
   left: 25%;
   top: 55%;
@@ -260,6 +262,8 @@ z-index: 9999;
 .menu-layer1-hotspot {
   position: absolute;
 
+  pointer-events: auto;
+
   left: 25%;
   top: 30%;
 
@@ -273,6 +277,7 @@ z-index: 9999;
 
 .menu-layer2-hotspot {
   position: absolute;
+  pointer-events: auto;
 
   left: 25%;
   top: 45%;
@@ -287,6 +292,7 @@ z-index: 9999;
 
 .menu-source-hotspot {
   position: absolute;
+  pointer-events: auto;
 
   left: 25%;
   top: 60%;
@@ -301,6 +307,7 @@ z-index: 9999;
 
 .menu2-layer1-hotspot {
   position: absolute;
+  pointer-events: auto;
 
   left: 25%;
   top: 30%;
@@ -315,6 +322,7 @@ z-index: 9999;
 
 .menu2-layer2-hotspot {
   position: absolute;
+  pointer-events: auto;
 
   left: 25%;
   top: 45%;
@@ -329,6 +337,7 @@ z-index: 9999;
 
 .menu2-source-hotspot {
   position: absolute;
+  pointer-events: auto;
 
   left: 25%;
   top: 60%;
@@ -343,6 +352,7 @@ z-index: 9999;
 
 .menus-layer1-hotspot {
   position: absolute;
+  pointer-events: auto;
 
   left: 25%;
   top: 30%;
@@ -357,6 +367,7 @@ z-index: 9999;
 
 .menus-layer2-hotspot {
   position: absolute;
+  pointer-events: auto;
 
   left: 25%;
   top: 45%;
@@ -371,6 +382,7 @@ z-index: 9999;
 
 .menus-source-hotspot {
   position: absolute;
+  pointer-events: auto;
 
   left: 25%;
   top: 60%;
