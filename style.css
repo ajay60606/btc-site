@@ -604,7 +604,9 @@ z-index: 9999;
   .email-hotspot {
 
     left: 18%;
-    top: 50%;
+    top: auto;
+
+    bottom: 4%;
 
     width: 64%;
     height: 10%;
