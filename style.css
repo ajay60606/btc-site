@@ -311,6 +311,7 @@ body {
 .optional-continue-hotspot,
 
 .layer2-hotspot,
+.source-hotspot, 
 
 .menu-layer1-hotspot,
 .menu-layer2-hotspot,
@@ -702,6 +703,38 @@ body {
     height: 8%;
 
     background: rgba(255,255,255,0.25);
+
+  }
+
+}
+
+@media (min-width: 769px) {
+
+  .amazon-hotspot {
+
+    left: 39%;
+    top: 39%;
+
+    width: 22%;
+    height: 8%;
+
+    background: rgba(255,0,0,0.25);
+
+  }
+
+}
+
+@media (min-width: 769px) {
+
+  .email-hotspot {
+
+    left: 39%;
+    top: 53%;
+
+    width: 22%;
+    height: 8%;
+
+    background: rgba(0,255,255,0.25);
 
   }
 
