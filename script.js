@@ -179,7 +179,7 @@ localStorage.setItem("btc-slide", currentSlide);
   
     isAnimating = false;
   
-  }, 600);
+  }, 900);
 }
 
 function openMenu() {
