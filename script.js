@@ -276,13 +276,7 @@ currentMenu = document.querySelector(
     const previousLayer =
       slides[previousSlide]?.dataset.layer;
   
-    if (
-      currentLayer === "source"
-    ) {
-  
-      return;
-  
-    }
+ 
   
     if (
       currentLayer === "optional1" &&
@@ -344,13 +338,7 @@ window.addEventListener("wheel", (event) => {
       const previousLayer =
         slides[previousSlide]?.dataset.layer;
 
-        if (
-            currentLayer === "source"
-          ) {
-          
-            return;
-          
-          }
+       
     
       if (
         currentLayer === "optional1" &&
@@ -496,13 +484,7 @@ else if (
     const previousLayer =
       slides[previousSlide]?.dataset.layer;
   
-    if (
-      currentLayer === "source"
-    ) {
-  
-      return;
-  
-    }
+   
   
     if (
       currentLayer === "optional1" &&
