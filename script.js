@@ -72,7 +72,8 @@ let currentSlide = parseInt(localStorage.getItem("btc-slide")) || 0;
 
 let currentMenu = null;
 let isAnimating = false;
-let wheelAnimating = false;
+
+let lastWheelTime = 0;
 let openingOptional = false;
 let closingOptional = false;
 
@@ -324,17 +325,13 @@ currentMenu = document.querySelector(
   window.addEventListener("wheel", (event) => {
   
     event.preventDefault();
-    event.stopImmediatePropagation();
   
-    if (wheelAnimating) return;
+  
+    const now = Date.now();
 
-wheelAnimating = true;
+if (now - lastWheelTime < 1100) return;
 
-setTimeout(() => {
-
-  wheelAnimating = false;
-
-}, 1100);
+lastWheelTime = now;
   
     const direction =
       Math.sign(event.deltaY);
