@@ -330,17 +330,14 @@ currentMenu = document.querySelector(
   
     
   
-    const direction =
-      Math.sign(event.deltaY);
+
   
-    if (direction === 0) return;
-  
-    
+
   
     const currentLayer =
       slides[currentSlide].dataset.layer;
   
-    if (direction > 0) {
+      if (event.deltaY > 5) {
   
       const nextSlide =
         currentSlide + 1;
@@ -379,7 +376,7 @@ currentMenu = document.querySelector(
   
     }
   
-    else {
+    else if (event.deltaY < -5) {
   
       const previousSlide =
         currentSlide - 1;
