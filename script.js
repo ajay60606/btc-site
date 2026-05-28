@@ -242,22 +242,9 @@ currentMenu = document.querySelector(
     const nextLayer =
       slides[nextSlide]?.dataset.layer;
   
-    if (
-      currentLayer === "source"
-    ) {
+   
   
-      return;
   
-    }
-  
-    if (
-      currentLayer === "layer2" &&
-      nextLayer === "source"
-    ) {
-  
-      return;
-  
-    }
   
     if (
       currentLayer === "optional1" &&
@@ -326,22 +313,7 @@ window.addEventListener("wheel", (event) => {
       const nextLayer =
         slides[nextSlide]?.dataset.layer;
 
-        if (
-            currentLayer === "layer2" &&
-            nextLayer === "source"
-          ) {
-          
-            return;
-          
-          }
-
-        if (
-            currentLayer === "source"
-          ) {
-          
-            return;
-          
-          }
+       
     
       if (
         currentLayer === "optional1" &&
@@ -490,22 +462,7 @@ const currentLayer =
   const nextLayer =
     slides[nextSlide]?.dataset.layer;
 
-  if (
-    currentLayer === "source"
-  ) {
 
-    return;
-
-  }
-
-  if (
-    currentLayer === "layer2" &&
-    nextLayer === "source"
-  ) {
-
-    return;
-
-  }
 
   if (
     currentLayer === "optional1" &&
