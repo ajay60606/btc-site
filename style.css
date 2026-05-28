@@ -652,7 +652,7 @@ z-index: 9999;
     width: 7%;
     height: 6%;
 
-    background: transparent;
+    background: rgba(0,255,0,0.25);
 
   }
 
