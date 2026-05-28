@@ -621,13 +621,20 @@ body {
 
 }
 
+
+
+
+
+
+
+
 @media (min-width: 769px) {
 
   
   .hotspot-23 {
 
     top: 84%;
-    left: 45%;
+    left: 42%;
 
     width: 7%;
     height: 6%;
@@ -658,7 +665,7 @@ body {
 
   .optional-continue-hotspot {
 
-    bottom: 0%;
+    bottom: 2%;
 
     left: 50%;
 
@@ -675,7 +682,7 @@ body {
 
   .layer2-hotspot {
 
-    bottom: 0%;
+    bottom: 2%;
 
     left: 50%;
 
