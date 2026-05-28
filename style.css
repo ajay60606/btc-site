@@ -483,15 +483,7 @@ body {
 
   pointer-events: auto;
 
-  bottom: 4%;
-  left: 50%;
-
   transform: translateX(-50%);
-
-  width: 40%;
-  height: 6%;
-
-  background: rgba(255,255,0,0.25);
 
   z-index: 9999;
 }
@@ -634,7 +626,7 @@ body {
   .hotspot-23 {
 
     top: 84%;
-    left: 42%;
+    left: 40%;
 
     width: 7%;
     height: 6%;
@@ -690,6 +682,23 @@ body {
     height: 7%;
 
     background: rgba(0,255,0,0.25);
+
+  }
+
+}
+
+@media (min-width: 769px) {
+
+  .source-hotspot {
+
+    bottom: 0%;
+
+    left: 50%;
+
+    width: 22%;
+    height: 7%;
+
+    background: rgba(255,255,0,0.25);
 
   }
 
