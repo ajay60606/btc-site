@@ -628,3 +628,20 @@ z-index: 9999;
   }
 
 }
+
+@media (max-width: 768px) {
+
+  .close-hotspot {
+
+    left: 50%;
+
+    bottom: 0%;
+
+    width: 70%;
+    height: 10%;
+
+    background: transparent;
+
+  }
+
+}
