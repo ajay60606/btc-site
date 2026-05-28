@@ -653,3 +653,21 @@ body {
   }
 
 }
+
+@media (min-width: 769px) {
+
+  .menu-layer2-hotspot,
+  .menu2-layer2-hotspot,
+  .menus-layer2-hotspot {
+
+    left: 39%;
+    top: 42%;
+
+    width: 22%;
+    height: 8%;
+
+    background: rgba(0,255,0,0.25);
+
+  }
+
+}
