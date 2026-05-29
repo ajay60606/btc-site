@@ -182,7 +182,7 @@ if (
   
     isAnimating = false;
   
-  }, 900);
+  }, 850);
 }
 
 function openMenu() {
