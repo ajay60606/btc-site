@@ -686,10 +686,10 @@ window.addEventListener("load", () => {
 
 
   const hotspotX =
-    rect.left + (800 * scaleX);
+  800 * scaleX;
 
-  const hotspotY =
-    rect.top + (3400 * scaleY);
+const hotspotY =
+  3400 * scaleY;
 
   const hotspotWidth =
     300 * scaleX;

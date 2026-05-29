@@ -769,7 +769,7 @@ body {
 
 #math-hotspot {
 
-  position: fixed;
+  position: absolute;
 
   background: rgba(255, 0, 0, 0.35);
 
