@@ -627,44 +627,80 @@ const loadingBar =
   document.getElementById("loading-bar");
 
 
-let fakeProgress = 0;
+  const allImages =
+  document.querySelectorAll("img");
 
 
-const progressInterval = setInterval(() => {
+const totalImages =
+  allImages.length;
 
-  if (fakeProgress < 80) {
 
-    fakeProgress += 2;
+let decodedImages = 0;
+
+
+async function trackImageProgress() {
+
+  for (const img of allImages) {
+
+    try {
+
+      if (!img.complete) {
+
+        await new Promise(resolve => {
+
+          img.onload = resolve;
+          img.onerror = resolve;
+
+        });
+
+      }
+
+      await img.decode();
+
+    }
+
+    catch(error) {
+
+    }
+
+
+    decodedImages++;
+
+
+    const progress =
+  (decodedImages / totalImages) * 92;
+
+
+  requestAnimationFrame(() => {
 
     loadingBar.style.width =
-      fakeProgress + "%";
+      progress + "%";
+  
+  });
 
   }
 
-}, 80);
-
-
-window.addEventListener("load", () => {
-
-  clearInterval(progressInterval);
-
   loadingBar.style.width = "100%";
+  loadingOverlay.style.opacity = "0";
 
 
   setTimeout(() => {
 
-    loadingOverlay.style.opacity = "0";
+    loadingOverlay.style.display = "none";
+
+  }, 600);
+
+}
 
 
-    setTimeout(() => {
+window.addEventListener(
+  "load",
+  () => {
 
-      loadingOverlay.style.display = "none";
+    trackImageProgress();
 
-    }, 600);
-
-  }, 200);
-
-});
+  }
+);
 
 
 
