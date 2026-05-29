@@ -679,7 +679,7 @@ else if (
 
 
 
-window.addEventListener("pointerdown", () => {
+function activateDelayedImages() {
 
   const delayedImages =
     document.querySelectorAll("img[data-src]");
@@ -690,4 +690,29 @@ window.addEventListener("pointerdown", () => {
 
   });
 
-}, { once: true });
+}
+
+
+window.addEventListener(
+  "pointerdown",
+  activateDelayedImages,
+  { once: true }
+);
+
+window.addEventListener(
+  "wheel",
+  activateDelayedImages,
+  { once: true }
+);
+
+window.addEventListener(
+  "keydown",
+  activateDelayedImages,
+  { once: true }
+);
+
+window.addEventListener(
+  "touchstart",
+  activateDelayedImages,
+  { once: true }
+);
