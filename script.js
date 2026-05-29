@@ -577,15 +577,6 @@ preloadImages(batch1Images, () => {
 
   updateUIState();
 
-  const delayedImage =
-  document.querySelector(
-    'img[data-src="slides/layer-2/30.png"]'
-  );
-
-delayedImage.src =
-  delayedImage.dataset.src;
-
-
 
 });
 
@@ -685,3 +676,18 @@ else if (
   }
 
 });
+
+
+
+window.addEventListener("pointerdown", () => {
+
+  const delayedImages =
+    document.querySelectorAll("img[data-src]");
+
+  delayedImages.forEach((img) => {
+
+    img.src = img.dataset.src;
+
+  });
+
+}, { once: true });
