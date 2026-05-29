@@ -1,5 +1,127 @@
 const slides = document.querySelectorAll(".slide:not(.menu-slide)");
 
+const batch1Images = [
+
+  // MENU
+  "slides/menu-1.png",
+  "slides/menu-2.png",
+  "slides/menu-s.png",
+
+  // SOURCE
+  "slides/source.png",
+
+  // LAYER 1
+  "slides/layer-1/1.png",
+  "slides/layer-1/2.png",
+  "slides/layer-1/3.png",
+  "slides/layer-1/4.png",
+  "slides/layer-1/new-1.png",
+  "slides/layer-1/5.png",
+  "slides/layer-1/6.png",
+  "slides/layer-1/7.png",
+  "slides/layer-1/8.png",
+  "slides/layer-1/9.png",
+  "slides/layer-1/10.png",
+  "slides/layer-1/11.png",
+  "slides/layer-1/12.png",
+  "slides/layer-1/13.png",
+  "slides/layer-1/14.png",
+  "slides/layer-1/15.png",
+
+  // LAYER 2
+  "slides/layer-2/1.png",
+  "slides/layer-2/2.png",
+  "slides/layer-2/3.png",
+  "slides/layer-2/4.png",
+  "slides/layer-2/5.png",
+  "slides/layer-2/6.png",
+  "slides/layer-2/7.png",
+  "slides/layer-2/8.png",
+  "slides/layer-2/9.png",
+  "slides/layer-2/10.png"
+
+];
+
+
+const batch2Images = [
+
+  // OPTIONAL
+  "slides/layer-o/1.png",
+  "slides/layer-o/2.png",
+  "slides/layer-o/3.png",
+  "slides/layer-o/4.png",
+  "slides/layer-o/5.png",
+  "slides/layer-o/6.png",
+  "slides/layer-o/7.png",
+
+  // REMAINING LAYER 1
+  "slides/layer-1/16.png",
+  "slides/layer-1/17.png",
+  "slides/layer-1/18.png",
+  "slides/layer-1/19.png",
+  "slides/layer-1/20.png",
+  "slides/layer-1/21.png",
+  "slides/layer-1/22.png",
+  "slides/layer-1/23.png",
+  "slides/layer-1/24.png",
+  "slides/layer-1/25.png",
+  "slides/layer-1/26.png",
+  "slides/layer-1/27.png",
+  "slides/layer-1/28.png",
+
+  // REMAINING LAYER 2
+  "slides/layer-2/11.png",
+  "slides/layer-2/12.png",
+  "slides/layer-2/13.png",
+  "slides/layer-2/14.png",
+  "slides/layer-2/15.png",
+  "slides/layer-2/16.png",
+  "slides/layer-2/17.png",
+  "slides/layer-2/18.png",
+  "slides/layer-2/19.png",
+  "slides/layer-2/20.png",
+  "slides/layer-2/21.png",
+  "slides/layer-2/22.png",
+  "slides/layer-2/23.png",
+  "slides/layer-2/24.png",
+  "slides/layer-2/25.png",
+  "slides/layer-2/26.png",
+  "slides/layer-2/27.png",
+  "slides/layer-2/28.png",
+  "slides/layer-2/29.png",
+  "slides/layer-2/30.png",
+  "slides/layer-2/31.png",
+  "slides/layer-2/32.png",
+  "slides/layer-2/33.png"
+
+];
+
+
+function preloadImages(imageArray, callback) {
+
+  let loadedCount = 0;
+
+  imageArray.forEach((src) => {
+
+    const img = new Image();
+
+    img.src = src;
+
+    img.onload = () => {
+
+      loadedCount++;
+
+      if (loadedCount === imageArray.length) {
+
+        callback();
+
+      }
+
+    };
+
+  });
+
+}
 
 const optionalHotspot = document.querySelector(".optional-hotspot");
 optionalHotspot.addEventListener("click", () => {
@@ -183,7 +305,7 @@ if (
     isAnimating = false;
   
   }, 850);
-  
+
 }
 
 function openMenu() {
@@ -502,8 +624,19 @@ closeHotspot.addEventListener("click", () => {
   closeMenu();
 });
 
-slides[currentSlide].classList.add("active");
-updateUIState();
+preloadImages(batch1Images, () => {
+
+  slides[currentSlide].classList.add("active");
+
+  updateUIState();
+
+  preloadImages(batch2Images, () => {
+
+    console.log("Batch 2 loaded");
+
+  });
+
+});
 
 window.addEventListener("keydown", (event) => {
     if (isAnimating) return;
