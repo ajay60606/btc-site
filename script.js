@@ -664,6 +664,7 @@ async function trackImageProgress() {
 
     }
 
+    
 
     decodedImages++;
 
