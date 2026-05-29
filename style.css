@@ -434,7 +434,7 @@ body {
   .menus-layer1-hotspot {
 
     left: 18%;
-    top: 36%;
+    top: 36.5%;
 
     width: 64%;
     height: 7%;
@@ -452,7 +452,7 @@ body {
   .menus-layer2-hotspot {
 
     left: 18%;
-    top: 44%;
+    top: 45.5%;
 
     width: 64%;
     height: 7%;
@@ -470,10 +470,10 @@ body {
   .menus-source-hotspot {
 
     left: 18%;
-    top: 57%;
+    top: 58%;
 
     width: 64%;
-    height: 7%;
+    height: 8%;
 
     background: rgba(255,0,0,0.25);
 
@@ -526,7 +526,7 @@ body {
     width: 70%;
     height: 10%;
 
-    background: transparent;
+    background: rgba(255,0,0,0.25);
 
   }
 
