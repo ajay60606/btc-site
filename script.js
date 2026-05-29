@@ -664,3 +664,50 @@ window.addEventListener("load", () => {
   console.log(rect);
 
 });
+
+window.addEventListener("load", () => {
+
+  const image =
+    document.getElementById("test-image");
+
+  const hotspot =
+    document.getElementById("math-hotspot");
+
+  const rect =
+    image.getBoundingClientRect();
+
+
+  const imageWidth = rect.width;
+  const imageHeight = rect.height;
+
+
+  const scaleX = imageWidth / 2000;
+  const scaleY = imageHeight / 4050;
+
+
+  const hotspotX =
+    rect.left + (800 * scaleX);
+
+  const hotspotY =
+    rect.top + (3400 * scaleY);
+
+  const hotspotWidth =
+    300 * scaleX;
+
+  const hotspotHeight =
+    250 * scaleY;
+
+
+  hotspot.style.left =
+    hotspotX + "px";
+
+  hotspot.style.top =
+    hotspotY + "px";
+
+  hotspot.style.width =
+    hotspotWidth + "px";
+
+  hotspot.style.height =
+    hotspotHeight + "px";
+
+});
