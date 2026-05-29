@@ -607,4 +607,48 @@ else if (
 });
 
 
+const loadingOverlay =
+  document.getElementById("loading-overlay");
 
+const loadingBar =
+  document.getElementById("loading-bar");
+
+
+let fakeProgress = 0;
+
+
+const progressInterval = setInterval(() => {
+
+  if (fakeProgress < 80) {
+
+    fakeProgress += 2;
+
+    loadingBar.style.width =
+      fakeProgress + "%";
+
+  }
+
+}, 80);
+
+
+window.addEventListener("load", () => {
+
+  clearInterval(progressInterval);
+
+  loadingBar.style.width = "100%";
+
+
+  setTimeout(() => {
+
+    loadingOverlay.style.opacity = "0";
+
+
+    setTimeout(() => {
+
+      loadingOverlay.style.display = "none";
+
+    }, 600);
+
+  }, 200);
+
+});
