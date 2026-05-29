@@ -324,9 +324,9 @@ body {
 
   aspect-ratio: 2000 / 4050;
 
-  height: 100dvh;
+  width: min(100vw, 49.38dvh);
 
-  max-width: 100vw;
+  height: auto;
 
   margin: 0 auto;
 
