@@ -43,59 +43,6 @@ const batch1Images = [
 ];
 
 
-const batch2Images = [
-
-  // OPTIONAL
-  "slides/layer-o/1.png",
-  "slides/layer-o/2.png",
-  "slides/layer-o/3.png",
-  "slides/layer-o/4.png",
-  "slides/layer-o/5.png",
-  "slides/layer-o/6.png",
-  "slides/layer-o/7.png",
-
-  // REMAINING LAYER 1
-  "slides/layer-1/16.png",
-  "slides/layer-1/17.png",
-  "slides/layer-1/18.png",
-  "slides/layer-1/19.png",
-  "slides/layer-1/20.png",
-  "slides/layer-1/21.png",
-  "slides/layer-1/22.png",
-  "slides/layer-1/23.png",
-  "slides/layer-1/24.png",
-  "slides/layer-1/25.png",
-  "slides/layer-1/26.png",
-  "slides/layer-1/27.png",
-  "slides/layer-1/28.png",
-
-  // REMAINING LAYER 2
-  "slides/layer-2/11.png",
-  "slides/layer-2/12.png",
-  "slides/layer-2/13.png",
-  "slides/layer-2/14.png",
-  "slides/layer-2/15.png",
-  "slides/layer-2/16.png",
-  "slides/layer-2/17.png",
-  "slides/layer-2/18.png",
-  "slides/layer-2/19.png",
-  "slides/layer-2/20.png",
-  "slides/layer-2/21.png",
-  "slides/layer-2/22.png",
-  "slides/layer-2/23.png",
-  "slides/layer-2/24.png",
-  "slides/layer-2/25.png",
-  "slides/layer-2/26.png",
-  "slides/layer-2/27.png",
-  "slides/layer-2/28.png",
-  "slides/layer-2/29.png",
-  "slides/layer-2/30.png",
-  "slides/layer-2/31.png",
-  "slides/layer-2/32.png",
-  "slides/layer-2/33.png"
-
-];
-
 
 function preloadImages(imageArray, callback) {
 
@@ -630,15 +577,7 @@ preloadImages(batch1Images, () => {
 
   updateUIState();
 
-  window.addEventListener("pointerdown", () => {
 
-    preloadImages(batch2Images, () => {
-  
-      console.log("Batch 2 loaded");
-  
-    });
-  
-  }, { once: true });
 
 });
 
