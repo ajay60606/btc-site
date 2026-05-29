@@ -718,31 +718,11 @@ function updateImageWrappers() {
 
 window.addEventListener(
   "load",
-  updateTestWrapper
+  updateImageWrappers
 );
 
 window.addEventListener(
   "resize",
-  updateTestWrapper
+  updateImageWrappers
 );
 
-
-
-
-
-window.addEventListener("load", () => {
-
-  updateImageWrappers();
-
-
-
-});
-
-
-window.addEventListener("resize", () => {
-
-  updateImageWrappers();
-
- 
-
-});
