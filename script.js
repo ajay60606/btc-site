@@ -652,3 +652,15 @@ window.addEventListener("load", () => {
   }, 200);
 
 });
+
+window.addEventListener("load", () => {
+
+  const image =
+    document.getElementById("test-image");
+
+  const rect =
+    image.getBoundingClientRect();
+
+  console.log(rect);
+
+});
