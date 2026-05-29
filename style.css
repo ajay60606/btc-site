@@ -635,7 +635,7 @@ body {
     width: 22%;
     height: 6%;
 
-    background: rgba(255,0,0,0.25);
+    background: transparent;
 
   }
 
@@ -653,7 +653,7 @@ body {
     width: 22%;
     height: 6%;
 
-    background: rgba(255,0,0,0.25);
+    background: transparent;
 
   }
 
@@ -671,7 +671,7 @@ body {
     width: 22%;
     height: 6%;
 
-    background: rgba(255,0,0,0.25);
+    background: transparent;
 
   }
 
@@ -688,7 +688,7 @@ body {
     width: 22%;
     height: 8%;
 
-    background: rgba(255,0,0,0.25);
+    background: transparent;
 
   }
 
