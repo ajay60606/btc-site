@@ -726,3 +726,56 @@ window.addEventListener(
   updateImageWrappers
 );
 
+
+window.addEventListener(
+  "load",
+  positionHotspot23
+);
+
+window.addEventListener(
+  "resize",
+  positionHotspot23
+);
+
+
+
+
+
+function positionHotspot23() {
+
+  const wrapper =
+    document.querySelector(
+      '[data-entry="optional1-trigger"] .image-wrapper'
+    );
+
+  const hotspot =
+    document.querySelector(".hotspot-23");
+
+
+  const wrapperWidth =
+    wrapper.clientWidth;
+
+  const wrapperHeight =
+    wrapper.clientHeight;
+
+
+  const scaleX =
+    wrapperWidth / 2000;
+
+  const scaleY =
+    wrapperHeight / 4050;
+
+
+  hotspot.style.left =
+    (800 * scaleX) + "px";
+
+  hotspot.style.top =
+    (3400 * scaleY) + "px";
+
+  hotspot.style.width =
+    (140 * scaleX) + "px";
+
+  hotspot.style.height =
+    (240 * scaleY) + "px";
+
+}
