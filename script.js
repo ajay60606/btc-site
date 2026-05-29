@@ -636,6 +636,7 @@ const totalImages =
 
 
 let decodedImages = 0;
+loadingBar.style.width = "20%";
 
 
 async function trackImageProgress() {
@@ -668,7 +669,9 @@ async function trackImageProgress() {
 
 
     const progress =
-  (decodedImages / totalImages) * 92;
+  20 + (
+    (decodedImages / totalImages) * 72
+  );
 
 
   requestAnimationFrame(() => {
