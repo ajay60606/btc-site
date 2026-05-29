@@ -778,4 +778,7 @@ function positionHotspot23() {
   hotspot.style.height =
     (240 * scaleY) + "px";
 
+    hotspot.style.background =
+  "rgba(0,255,255,0.35)";
+
 }
