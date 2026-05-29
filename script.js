@@ -577,6 +577,14 @@ preloadImages(batch1Images, () => {
 
   updateUIState();
 
+  const delayedImage =
+  document.querySelector(
+    'img[data-src="slides/layer-2/30.png"]'
+  );
+
+delayedImage.src =
+  delayedImage.dataset.src;
+
 
 
 });
