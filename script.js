@@ -630,11 +630,15 @@ preloadImages(batch1Images, () => {
 
   updateUIState();
 
-  preloadImages(batch2Images, () => {
+  window.addEventListener("pointerdown", () => {
 
-    console.log("Batch 2 loaded");
-
-  });
+    preloadImages(batch2Images, () => {
+  
+      console.log("Batch 2 loaded");
+  
+    });
+  
+  }, { once: true });
 
 });
 
