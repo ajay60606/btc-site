@@ -696,7 +696,7 @@ function updateTestWrapper() {
   if (viewportRatio > artworkRatio) {
   
     wrapperHeight =
-      viewportHeight * 0.92;
+      viewportHeight * 0.985;
   
     wrapperWidth =
       wrapperHeight * artworkRatio;
@@ -706,7 +706,7 @@ function updateTestWrapper() {
   else {
   
     wrapperWidth =
-      viewportWidth * 0.92;
+      viewportWidth * 0.985;
   
     wrapperHeight =
       wrapperWidth / artworkRatio;
