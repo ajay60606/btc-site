@@ -763,12 +763,3 @@ body {
 }
 
 
-#math-hotspot {
-
-  position: absolute;
-
-  background: rgba(255, 0, 0, 0.35);
-
-  z-index: 99999;
-
-}

@@ -653,22 +653,12 @@ window.addEventListener("load", () => {
 
 });
 
-window.addEventListener("load", () => {
-
-  const image =
-    document.getElementById("test-image");
-
-  const rect =
-    image.getBoundingClientRect();
-
-  console.log(rect);
-
-});
 
 
 
 
-function updateTestWrapper() {
+
+function updateImageWrappers() {
 
   const wrappers =
   document.querySelectorAll(".image-wrapper");
@@ -738,56 +728,21 @@ window.addEventListener(
 
 
 
-function updateMathHotspot() {
 
-  const wrapper =
-    document.getElementById("test-wrapper");
-
-  const hotspot =
-    document.getElementById("math-hotspot");
-
-
-  const wrapperWidth =
-    wrapper.clientWidth;
-
-  const wrapperHeight =
-    wrapper.clientHeight;
-
-
-  const scaleX =
-    wrapperWidth / 2000;
-
-  const scaleY =
-    wrapperHeight / 4050;
-
-
-  hotspot.style.left =
-    (800 * scaleX) + "px";
-
-  hotspot.style.top =
-    (3400 * scaleY) + "px";
-
-  hotspot.style.width =
-    (300 * scaleX) + "px";
-
-  hotspot.style.height =
-    (250 * scaleY) + "px";
-
-}
 
 window.addEventListener("load", () => {
 
-  updateTestWrapper();
+  updateImageWrappers();
 
-  updateMathHotspot();
+
 
 });
 
 
 window.addEventListener("resize", () => {
 
-  updateTestWrapper();
+  updateImageWrappers();
 
-  updateMathHotspot();
+ 
 
 });
