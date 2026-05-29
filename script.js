@@ -203,7 +203,7 @@ currentMenu = document.querySelector(
 );
   
     currentMenu.classList.add("active");
-    document.querySelector(".close-hotspot").style.display = "block";
+    
   }
 
   function closeMenu() {
@@ -213,7 +213,7 @@ currentMenu = document.querySelector(
   
     currentMenu.classList.remove("active");
   
-    document.querySelector(".close-hotspot").style.display = "none";
+    
   }
 
   let touchStartY = 0;
@@ -436,6 +436,11 @@ const menuNavigationHotspots =
     ".menu-hotspot-layer [data-target]"
   );
 
+  const menuCloseHotspots =
+  document.querySelectorAll(
+    ".menu-close-hotspot"
+  );
+
 menuHotspot.addEventListener("click", () => {
   openMenu();
 });
@@ -462,8 +467,18 @@ menuNavigationHotspots.forEach(hotspot => {
   });
 
 
+  menuCloseHotspots.forEach(hotspot => {
 
-const closeHotspot = document.querySelector(".close-hotspot");
+    hotspot.addEventListener("click", () => {
+  
+      closeMenu();
+  
+    });
+  
+  });
+
+
+
 const optionalCloseHotspots = document.querySelectorAll(".optional-close-hotspot");
 const optionalContinueHotspot =
   document.querySelector(
@@ -501,9 +516,7 @@ const optionalContinueHotspot =
   
     });
 
-closeHotspot.addEventListener("click", () => {
-  closeMenu();
-});
+
 
 slides[currentSlide].classList.add("active");
 
@@ -737,7 +750,112 @@ window.addEventListener(
   positionHotspot23
 );
 
+window.addEventListener(
+  "load",
+  positionOptionalCloseHotspots
+);
 
+window.addEventListener(
+  "resize",
+  positionOptionalCloseHotspots
+);
+
+
+window.addEventListener(
+  "load",
+  positionOptionalContinueHotspot
+);
+
+window.addEventListener(
+  "resize",
+  positionOptionalContinueHotspot
+);
+
+
+window.addEventListener(
+  "load",
+  positionLayer2Hotspot
+);
+
+window.addEventListener(
+  "resize",
+  positionLayer2Hotspot
+);
+
+
+window.addEventListener(
+  "load",
+  positionSourceHotspot
+);
+
+window.addEventListener(
+  "resize",
+  positionSourceHotspot
+);
+
+
+
+window.addEventListener(
+  "load",
+  positionMenuLayer1Hotspots
+);
+
+window.addEventListener(
+  "resize",
+  positionMenuLayer1Hotspots
+);
+
+window.addEventListener(
+  "load",
+  positionMenuLayer2Hotspots
+);
+
+window.addEventListener(
+  "resize",
+  positionMenuLayer2Hotspots
+);
+
+window.addEventListener(
+  "load",
+  positionMenuSourceHotspots
+);
+
+window.addEventListener(
+  "resize",
+  positionMenuSourceHotspots
+);
+
+
+window.addEventListener(
+  "load",
+  positionAmazonHotspot
+);
+
+window.addEventListener(
+  "resize",
+  positionAmazonHotspot
+);
+
+
+window.addEventListener(
+  "load",
+  positionEmailHotspot
+);
+
+window.addEventListener(
+  "resize",
+  positionEmailHotspot
+);
+
+window.addEventListener(
+  "load",
+  positionMenuCloseHotspots
+);
+
+window.addEventListener(
+  "resize",
+  positionMenuCloseHotspots
+);
 
 
 
@@ -767,18 +885,503 @@ function positionHotspot23() {
 
 
   hotspot.style.left =
-    (800 * scaleX) + "px";
+    (380 * scaleX) + "px";
 
   hotspot.style.top =
-    (3400 * scaleY) + "px";
+    (3390 * scaleY) + "px";
 
   hotspot.style.width =
-    (140 * scaleX) + "px";
+    (500 * scaleX) + "px";
 
   hotspot.style.height =
-    (240 * scaleY) + "px";
+    (250 * scaleY) + "px";
 
     hotspot.style.background =
   "rgba(0,255,255,0.35)";
+
+}
+
+
+
+function positionOptionalCloseHotspots() {
+
+  const wrappers =
+    document.querySelectorAll(
+      '[data-layer="optional1"] .image-wrapper'
+    );
+
+  const hotspots =
+    document.querySelectorAll(
+      ".optional-close-hotspot"
+    );
+
+
+  wrappers.forEach((wrapper, index) => {
+
+    const hotspot =
+      hotspots[index];
+
+
+    const wrapperWidth =
+      wrapper.clientWidth;
+
+    const wrapperHeight =
+      wrapper.clientHeight;
+
+
+    const scaleX =
+      wrapperWidth / 2000;
+
+    const scaleY =
+      wrapperHeight / 4050;
+
+
+    hotspot.style.left =
+      (1680 * scaleX) + "px";
+
+    hotspot.style.top =
+      (0 * scaleY) + "px";
+
+    hotspot.style.width =
+      (320 * scaleX) + "px";
+
+    hotspot.style.height =
+      (280 * scaleY) + "px";
+
+
+    hotspot.style.background =
+      "rgba(0,255,255,0.35)";
+
+  });
+
+}
+
+
+
+function positionOptionalContinueHotspot() {
+
+  const wrapper =
+    document.querySelector(
+      '.optional-continue-hotspot'
+    ).closest('.image-wrapper');
+
+  const hotspot =
+    document.querySelector(
+      '.optional-continue-hotspot'
+    );
+
+
+  const wrapperWidth =
+    wrapper.clientWidth;
+
+  const wrapperHeight =
+    wrapper.clientHeight;
+
+
+  const scaleX =
+    wrapperWidth / 2000;
+
+  const scaleY =
+    wrapperHeight / 4050;
+
+
+  hotspot.style.left =
+    (1000 * scaleX) + "px";
+
+  hotspot.style.bottom =
+    (80 * scaleY) + "px";
+
+  hotspot.style.width =
+    (900 * scaleX) + "px";
+
+  hotspot.style.height =
+    (300 * scaleY) + "px";
+
+
+  hotspot.style.background =
+    "rgba(0,255,255,0.35)";
+
+}
+
+
+function positionLayer2Hotspot() {
+
+  const wrapper =
+    document.querySelector(
+      '[data-layer="layer1"] .layer2-hotspot'
+    ).closest('.image-wrapper');
+
+  const hotspot =
+    document.querySelector(
+      '.layer2-hotspot'
+    );
+
+
+  const wrapperWidth =
+    wrapper.clientWidth;
+
+  const wrapperHeight =
+    wrapper.clientHeight;
+
+
+  const scaleX =
+    wrapperWidth / 2000;
+
+  const scaleY =
+    wrapperHeight / 4050;
+
+
+  hotspot.style.left =
+    (1000 * scaleX) + "px";
+
+  hotspot.style.bottom =
+    (80 * scaleY) + "px";
+
+  hotspot.style.width =
+    (900 * scaleX) + "px";
+
+  hotspot.style.height =
+    (300 * scaleY) + "px";
+
+
+  hotspot.style.background =
+    "rgba(0,255,255,0.35)";
+
+}
+
+
+function positionSourceHotspot() {
+
+  const wrapper =
+    document.querySelector(
+      '.source-hotspot'
+    ).closest('.image-wrapper');
+
+  const hotspot =
+    document.querySelector(
+      '.source-hotspot'
+    );
+
+
+  const wrapperWidth =
+    wrapper.clientWidth;
+
+  const wrapperHeight =
+    wrapper.clientHeight;
+
+
+  const scaleX =
+    wrapperWidth / 2000;
+
+  const scaleY =
+    wrapperHeight / 4050;
+
+
+  hotspot.style.left =
+    (1000 * scaleX) + "px";
+
+  hotspot.style.bottom =
+    (80 * scaleY) + "px";
+
+  hotspot.style.width =
+    (900 * scaleX) + "px";
+
+  hotspot.style.height =
+    (300 * scaleY) + "px";
+
+
+  hotspot.style.background =
+    "rgba(0,255,255,0.35)";
+
+}
+
+
+function positionMenuLayer1Hotspots() {
+
+  const hotspots =
+    document.querySelectorAll(
+      '.menu-layer1-hotspot, .menu2-layer1-hotspot, .menus-layer1-hotspot'
+    );
+
+
+  hotspots.forEach(hotspot => {
+
+    const wrapper =
+      hotspot.closest('.image-wrapper');
+
+
+    const wrapperWidth =
+      wrapper.clientWidth;
+
+    const wrapperHeight =
+      wrapper.clientHeight;
+
+
+    const scaleX =
+      wrapperWidth / 2000;
+
+    const scaleY =
+      wrapperHeight / 4050;
+
+
+    hotspot.style.left =
+      (700 * scaleX) + "px";
+
+    hotspot.style.top =
+      (1600 * scaleY) + "px";
+
+    hotspot.style.width =
+      (600 * scaleX) + "px";
+
+    hotspot.style.height =
+      (260 * scaleY) + "px";
+
+
+    hotspot.style.background =
+      "rgba(0,255,255,0.35)";
+
+  });
+
+}
+
+
+function positionMenuLayer2Hotspots() {
+
+  const hotspots =
+    document.querySelectorAll(
+      '.menu-layer2-hotspot, .menu2-layer2-hotspot, .menus-layer2-hotspot'
+    );
+
+
+  hotspots.forEach(hotspot => {
+
+    const wrapper =
+      hotspot.closest('.image-wrapper');
+
+
+    const wrapperWidth =
+      wrapper.clientWidth;
+
+    const wrapperHeight =
+      wrapper.clientHeight;
+
+
+    const scaleX =
+      wrapperWidth / 2000;
+
+    const scaleY =
+      wrapperHeight / 4050;
+
+
+    hotspot.style.left =
+      (700 * scaleX) + "px";
+
+    hotspot.style.top =
+      (1910 * scaleY) + "px";
+
+    hotspot.style.width =
+      (600 * scaleX) + "px";
+
+    hotspot.style.height =
+      (260 * scaleY) + "px";
+
+
+    hotspot.style.background =
+      "rgba(0,255,255,0.35)";
+
+  });
+
+}
+
+
+function positionMenuSourceHotspots() {
+
+  const hotspots =
+    document.querySelectorAll(
+      '.menu-source-hotspot, .menu2-source-hotspot, .menus-source-hotspot'
+    );
+
+
+  hotspots.forEach(hotspot => {
+
+    const wrapper =
+      hotspot.closest('.image-wrapper');
+
+
+    const wrapperWidth =
+      wrapper.clientWidth;
+
+    const wrapperHeight =
+      wrapper.clientHeight;
+
+
+    const scaleX =
+      wrapperWidth / 2000;
+
+    const scaleY =
+      wrapperHeight / 4050;
+
+
+    hotspot.style.left =
+      (710 * scaleX) + "px";
+
+    hotspot.style.top =
+      (2210 * scaleY) + "px";
+
+    hotspot.style.width =
+      (600 * scaleX) + "px";
+
+    hotspot.style.height =
+      (260 * scaleY) + "px";
+
+
+    hotspot.style.background =
+      "rgba(0,255,255,0.35)";
+
+  });
+
+}
+
+
+
+
+function positionAmazonHotspot() {
+
+  const wrapper =
+    document.querySelector(
+      '.amazon-hotspot'
+    ).closest('.image-wrapper');
+
+  const hotspot =
+    document.querySelector(
+      '.amazon-hotspot'
+    );
+
+
+  const wrapperWidth =
+    wrapper.clientWidth;
+
+  const wrapperHeight =
+    wrapper.clientHeight;
+
+
+  const scaleX =
+    wrapperWidth / 2000;
+
+  const scaleY =
+    wrapperHeight / 4050;
+
+
+  hotspot.style.left =
+    (600 * scaleX) + "px";
+
+  hotspot.style.top =
+    (1520 * scaleY) + "px";
+
+  hotspot.style.width =
+    (800 * scaleX) + "px";
+
+  hotspot.style.height =
+    (280 * scaleY) + "px";
+
+
+  hotspot.style.background =
+    "rgba(0,255,255,0.35)";
+
+}
+
+
+
+function positionEmailHotspot() {
+
+  const wrapper =
+    document.querySelector(
+      '.email-hotspot'
+    ).closest('.image-wrapper');
+
+  const hotspot =
+    document.querySelector(
+      '.email-hotspot'
+    );
+
+
+  const wrapperWidth =
+    wrapper.clientWidth;
+
+  const wrapperHeight =
+    wrapper.clientHeight;
+
+
+  const scaleX =
+    wrapperWidth / 2000;
+
+  const scaleY =
+    wrapperHeight / 4050;
+
+
+  hotspot.style.left =
+    (550 * scaleX) + "px";
+
+  hotspot.style.top =
+    (3620 * scaleY) + "px";
+
+  hotspot.style.width =
+    (880 * scaleX) + "px";
+
+  hotspot.style.height =
+    (160 * scaleY) + "px";
+
+
+  hotspot.style.background =
+    "rgba(0,255,255,0.35)";
+
+}
+
+
+function positionMenuCloseHotspots() {
+
+  const hotspots =
+    document.querySelectorAll(
+      '.menu-close-hotspot'
+    );
+
+
+  hotspots.forEach(hotspot => {
+
+    const wrapper =
+      hotspot.closest('.image-wrapper');
+
+
+    const wrapperWidth =
+      wrapper.clientWidth;
+
+    const wrapperHeight =
+      wrapper.clientHeight;
+
+
+    const scaleX =
+      wrapperWidth / 2000;
+
+    const scaleY =
+      wrapperHeight / 4050;
+
+
+    hotspot.style.left =
+      (780 * scaleX) + "px";
+
+    hotspot.style.top =
+      (3550 * scaleY) + "px";
+
+    hotspot.style.width =
+      (420 * scaleX) + "px";
+
+    hotspot.style.height =
+      (320 * scaleY) + "px";
+
+
+    hotspot.style.background =
+      "rgba(0,255,255,0.35)";
+
+  });
 
 }

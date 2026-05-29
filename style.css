@@ -104,20 +104,14 @@ body {
   z-index: 500;
 }
 
-.close-hotspot {
-  position: fixed;
+.menu-close-hotspot {
 
-  bottom: 0;
-  left: 50%;
+  position: absolute;
 
-  transform: translateX(-50%);
+  pointer-events: auto;
 
-  width: 76%;
-  height: 90px;
+  z-index: 9999;
 
-  z-index: 3000;
-
-  display: none;
 }
 
 .slide-hotspot-layer {
@@ -219,77 +213,48 @@ body {
   z-index: 9999;
 }
 
-.menu-layer1-hotspot {
-  position: absolute;
 
-  pointer-events: auto;
-
-  z-index: 9999;
-}
-
-.menu-layer2-hotspot {
-  position: absolute;
-  pointer-events: auto;
-
-  z-index: 9999;
-}
-
-.menu-source-hotspot {
-  position: absolute;
-  pointer-events: auto;
-
-  z-index: 9999;
-}
-
-.menu2-layer1-hotspot {
-  position: absolute;
-  pointer-events: auto;
-
-
-  z-index: 9999;
-}
-
-.menu2-layer2-hotspot {
-  position: absolute;
-  pointer-events: auto;
-
-  z-index: 9999;
-}
-
-.menu2-source-hotspot {
-  position: absolute;
-  pointer-events: auto;
-
-
-  z-index: 9999;
-}
-
+.menu-layer1-hotspot,
+.menu2-layer1-hotspot,
 .menus-layer1-hotspot {
+
   position: absolute;
+
   pointer-events: auto;
 
- 
   z-index: 9999;
+
 }
 
+.menu-layer2-hotspot,
+.menu2-layer2-hotspot,
 .menus-layer2-hotspot {
+
   position: absolute;
+
   pointer-events: auto;
 
- 
   z-index: 9999;
+
 }
 
+.menu-source-hotspot,
+.menu2-source-hotspot,
 .menus-source-hotspot {
+
   position: absolute;
+
   pointer-events: auto;
 
   z-index: 9999;
+
 }
+
+
 
 
 .menu-hotspot,
-.close-hotspot,
+.menu-close-hotspot,
 
 .optional-hotspot,
 .optional-close-hotspot,
@@ -329,59 +294,6 @@ body {
 }
 
 
-
-@media (max-width: 768px) {
-
-  .optional-close-hotspot {
-
-    top: 0%;
-    left: 75%;
-
-    width: 15%;
-    height: 8%;
-
-    background: transparent;
-
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .optional-continue-hotspot {
-
-    bottom: 0%;
-
-    left: 48%;
-
-    width: 60%;
-    height: 9%;
-
-    background: transparent;
-
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .layer2-hotspot {
-
-    top: auto;
-
-    bottom: 0%;
-
-    left: 22%;
-
-    width: 60%;
-    height: 9%;
-
-    background: transparent;
-
-  }
-
-}
-
 .source-hotspot {
   position: absolute;
 
@@ -393,309 +305,16 @@ body {
 }
 
 
-@media (max-width: 768px) {
 
-  .source-hotspot {
 
-    top: auto;
 
-    bottom: 0%;
 
-    left: 48%;
 
-    width: 60%;
-    height: 9%;
 
-    background: transparent;
 
-  }
 
-}
 
-@media (max-width: 768px) {
 
-  .menu-layer1-hotspot,
-  .menu2-layer1-hotspot,
-  .menus-layer1-hotspot {
-
-    left: 18%;
-    top: 37%;
-
-    width: 64%;
-    height: 7%;
-
-    background: transparent;
-
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .menu-layer2-hotspot,
-  .menu2-layer2-hotspot,
-  .menus-layer2-hotspot {
-
-    left: 18%;
-    top: 45%;
-
-    width: 64%;
-    height: 7%;
-
-    background: transparent;
-
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .menu-source-hotspot,
-  .menu2-source-hotspot,
-  .menus-source-hotspot {
-
-    left: 18%;
-    top: 57%;
-
-    width: 64%;
-    height: 8%;
-
-    background: transparent;
-
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .amazon-hotspot {
-
-    left: 18%;
-    top: 37%;
-
-    width: 64%;
-    height: 10%;
-
-    background: transparent;
-
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .email-hotspot {
-
-    left: 18%;
-    top: auto;
-
-    bottom: 4%;
-
-    width: 64%;
-    height: 10%;
-
-    background: transparent;
-
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .close-hotspot {
-
-    left: 50%;
-
-    bottom: 6%;
-
-    width: 70%;
-    height: 10%;
-
-    background: transparent;
-
-  }
-
-}
-
-
-
-
-
-
-
-
-@media (min-width: 769px) {
-
-  .optional-close-hotspot {
-
-    top: 0%;
-    left: 59%;
-
-    width: 5%;
-    height: 7%;
-
-    background: rgba(0,255,255,0.25);
-
-  }
-
-}
-
-@media (min-width: 769px) {
-
-  .optional-continue-hotspot {
-
-    bottom: 2%;
-
-    left: 50%;
-
-    width: 22%;
-    height: 7%;
-
-    background: rgba(0,255,255,0.25);
-
-  }
-
-}
-
-@media (min-width: 769px) {
-
-  .layer2-hotspot {
-
-    bottom: 2%;
-
-    left: 50%;
-
-    width: 22%;
-    height: 7%;
-
-    background: transparent;
-
-  }
-
-}
-
-@media (min-width: 769px) {
-
-  .source-hotspot {
-
-    bottom: 2%;
-
-    left: 50%;
-
-    width: 22%;
-    height: 7%;
-
-    background: transparent;
-
-  }
-
-}
-
-@media (min-width: 769px) {
-
-  .menu-layer1-hotspot,
-  .menu2-layer1-hotspot,
-  .menus-layer1-hotspot {
-
-    left: 39%;
-    top: 37.5%;
-
-    width: 22%;
-    height: 6%;
-
-    background: transparent;
-
-  }
-
-}
-
-@media (min-width: 769px) {
-
-  .menu-layer2-hotspot,
-  .menu2-layer2-hotspot,
-  .menus-layer2-hotspot {
-
-    left: 39%;
-    top: 45.5%;
-
-    width: 22%;
-    height: 6%;
-
-    background: transparent;
-
-  }
-
-}
-
-@media (min-width: 769px) {
-
-  .menu-source-hotspot,
-  .menu2-source-hotspot,
-  .menus-source-hotspot {
-
-    left: 39%;
-    top: 58.5%;
-
-    width: 22%;
-    height: 6%;
-
-    background: transparent;
-
-  }
-
-}
-
-@media (min-width: 769px) {
-
-  .close-hotspot {
-
-    left: 50%;
-
-    bottom: 7%;
-
-    width: 22%;
-    height: 8%;
-
-    background: transparent;
-
-  }
-
-}
-
-@media (min-width: 769px) {
-
-  .amazon-hotspot {
-
-    left: 39%;
-    
-    top: 37%;
-
-    width: 22%;
-    height: 8%;
-
-    background: transparent;
-
-  }
-
-}
-
-@media (min-width: 769px) {
-
-  .email-hotspot {
-
-    left: 39%;
-    top: auto;
-    
-    bottom: 3%;
-
-    width: 22%;
-    height: 8%;
-
-    background: transparent;
-
-  }
-
-}
 
 #loading-overlay {
   position: fixed;
