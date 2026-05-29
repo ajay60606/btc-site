@@ -665,49 +665,125 @@ window.addEventListener("load", () => {
 
 });
 
-window.addEventListener("load", () => {
 
-  const image =
-    document.getElementById("test-image");
+
+
+function updateTestWrapper() {
+
+  const wrapper =
+    document.getElementById("test-wrapper");
+
+
+  const viewportWidth =
+    window.innerWidth;
+
+  const viewportHeight =
+    window.innerHeight;
+
+
+  const artworkRatio =
+    2000 / 4050;
+
+
+    const viewportRatio =
+    viewportWidth / viewportHeight;
+  
+  
+  let wrapperWidth;
+  let wrapperHeight;
+  
+  
+  if (viewportRatio > artworkRatio) {
+  
+    wrapperHeight =
+      viewportHeight * 0.92;
+  
+    wrapperWidth =
+      wrapperHeight * artworkRatio;
+  
+  }
+  
+  else {
+  
+    wrapperWidth =
+      viewportWidth * 0.92;
+  
+    wrapperHeight =
+      wrapperWidth / artworkRatio;
+  
+  }
+
+
+  wrapper.style.width =
+    wrapperWidth + "px";
+
+  wrapper.style.height =
+    wrapperHeight + "px";
+
+}
+
+window.addEventListener(
+  "load",
+  updateTestWrapper
+);
+
+window.addEventListener(
+  "resize",
+  updateTestWrapper
+);
+
+
+
+function updateMathHotspot() {
+
+  const wrapper =
+    document.getElementById("test-wrapper");
 
   const hotspot =
     document.getElementById("math-hotspot");
 
-  const rect =
-    image.getBoundingClientRect();
+
+  const wrapperWidth =
+    wrapper.clientWidth;
+
+  const wrapperHeight =
+    wrapper.clientHeight;
 
 
-  const imageWidth = rect.width;
-  const imageHeight = rect.height;
+  const scaleX =
+    wrapperWidth / 2000;
 
-
-  const scaleX = imageWidth / 2000;
-  const scaleY = imageHeight / 4050;
-
-
-  const hotspotX =
-  800 * scaleX;
-
-const hotspotY =
-  3400 * scaleY;
-
-  const hotspotWidth =
-    300 * scaleX;
-
-  const hotspotHeight =
-    250 * scaleY;
+  const scaleY =
+    wrapperHeight / 4050;
 
 
   hotspot.style.left =
-    hotspotX + "px";
+    (800 * scaleX) + "px";
 
   hotspot.style.top =
-    hotspotY + "px";
+    (3400 * scaleY) + "px";
 
   hotspot.style.width =
-    hotspotWidth + "px";
+    (300 * scaleX) + "px";
 
   hotspot.style.height =
-    hotspotHeight + "px";
+    (250 * scaleY) + "px";
+
+}
+
+window.addEventListener("load", () => {
+
+  updateTestWrapper();
+
+  updateMathHotspot();
+
+});
+
+
+window.addEventListener("resize", () => {
+
+  updateTestWrapper();
+
+  updateMathHotspot();
 
 });
