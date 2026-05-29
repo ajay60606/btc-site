@@ -765,3 +765,14 @@ body {
 
   transition: width 0.2s linear;
 }
+
+
+#math-hotspot {
+
+  position: fixed;
+
+  background: rgba(255, 0, 0, 0.35);
+
+  z-index: 99999;
+
+}
