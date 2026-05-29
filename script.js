@@ -1,74 +1,8 @@
 const slides = document.querySelectorAll(".slide:not(.menu-slide)");
 
-const batch1Images = [
-
-  // MENU
-  "slides/menu-1.png",
-  "slides/menu-2.png",
-  "slides/menu-s.png",
-
-  // SOURCE
-  "slides/source.png",
-
-  // LAYER 1
-  "slides/layer-1/1.png",
-  "slides/layer-1/2.png",
-  "slides/layer-1/3.png",
-  "slides/layer-1/4.png",
-  "slides/layer-1/new-1.png",
-  "slides/layer-1/5.png",
-  "slides/layer-1/6.png",
-  "slides/layer-1/7.png",
-  "slides/layer-1/8.png",
-  "slides/layer-1/9.png",
-  "slides/layer-1/10.png",
-  "slides/layer-1/11.png",
-  "slides/layer-1/12.png",
-  "slides/layer-1/13.png",
-  "slides/layer-1/14.png",
-  "slides/layer-1/15.png",
-
-  // LAYER 2
-  "slides/layer-2/1.png",
-  "slides/layer-2/2.png",
-  "slides/layer-2/3.png",
-  "slides/layer-2/4.png",
-  "slides/layer-2/5.png",
-  "slides/layer-2/6.png",
-  "slides/layer-2/7.png",
-  "slides/layer-2/8.png",
-  "slides/layer-2/9.png",
-  "slides/layer-2/10.png"
-
-];
 
 
 
-function preloadImages(imageArray, callback) {
-
-  let loadedCount = 0;
-
-  imageArray.forEach((src) => {
-
-    const img = new Image();
-
-    img.src = src;
-
-    img.onload = () => {
-
-      loadedCount++;
-
-      if (loadedCount === imageArray.length) {
-
-        callback();
-
-      }
-
-    };
-
-  });
-
-}
 
 const optionalHotspot = document.querySelector(".optional-hotspot");
 optionalHotspot.addEventListener("click", () => {
@@ -571,14 +505,9 @@ closeHotspot.addEventListener("click", () => {
   closeMenu();
 });
 
-preloadImages(batch1Images, () => {
+slides[currentSlide].classList.add("active");
 
-  slides[currentSlide].classList.add("active");
-
-  updateUIState();
-
-
-});
+updateUIState();
 
 window.addEventListener("keydown", (event) => {
     if (isAnimating) return;
