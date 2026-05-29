@@ -897,7 +897,7 @@ function positionHotspot23() {
     (250 * scaleY) + "px";
 
     hotspot.style.background =
-  "rgba(0,255,255,0.35)";
+  "transparent";
 
 }
 
@@ -950,7 +950,7 @@ function positionOptionalCloseHotspots() {
 
 
     hotspot.style.background =
-      "rgba(0,255,255,0.35)";
+      "transparent";
 
   });
 
@@ -999,7 +999,7 @@ function positionOptionalContinueHotspot() {
 
 
   hotspot.style.background =
-    "rgba(0,255,255,0.35)";
+    "transparent";
 
 }
 
@@ -1045,7 +1045,7 @@ function positionLayer2Hotspot() {
 
 
   hotspot.style.background =
-    "rgba(0,255,255,0.35)";
+    "transparent";
 
 }
 
@@ -1091,7 +1091,7 @@ function positionSourceHotspot() {
 
 
   hotspot.style.background =
-    "rgba(0,255,255,0.35)";
+    "transparent";
 
 }
 
@@ -1138,7 +1138,7 @@ function positionMenuLayer1Hotspots() {
 
 
     hotspot.style.background =
-      "rgba(0,255,255,0.35)";
+     "transparent";
 
   });
 
@@ -1187,7 +1187,7 @@ function positionMenuLayer2Hotspots() {
 
 
     hotspot.style.background =
-      "rgba(0,255,255,0.35)";
+      "transparent";
 
   });
 
@@ -1236,7 +1236,7 @@ function positionMenuSourceHotspots() {
 
 
     hotspot.style.background =
-      "rgba(0,255,255,0.35)";
+      "transparent";
 
   });
 
@@ -1286,7 +1286,7 @@ function positionAmazonHotspot() {
 
 
   hotspot.style.background =
-    "rgba(0,255,255,0.35)";
+    "transparent";
 
 }
 
@@ -1333,7 +1333,7 @@ function positionEmailHotspot() {
 
 
   hotspot.style.background =
-    "rgba(0,255,255,0.35)";
+    "transparent";
 
 }
 
@@ -1380,7 +1380,7 @@ function positionMenuCloseHotspots() {
 
 
     hotspot.style.background =
-      "rgba(0,255,255,0.35)";
+      "transparent";
 
   });
 
