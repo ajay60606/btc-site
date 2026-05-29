@@ -151,7 +151,10 @@ updateUIState();
 localStorage.setItem("btc-slide", currentSlide);
 
   
-  if (openingOptional && index === 26) {
+if (
+  openingOptional &&
+  slides[index].dataset.layer === "optional1"
+) {
 
     slides[index].classList.add("optional-opening");
   
