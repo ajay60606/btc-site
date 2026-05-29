@@ -550,7 +550,7 @@ body {
     width: 7%;
     height: 6%;
 
-    background: transparent;
+    background: rgba(0,255,255,0.25);
 
   }
 
@@ -583,7 +583,7 @@ body {
     width: 22%;
     height: 7%;
 
-    background: transparent;
+    background: rgba(0,255,255,0.25);
 
   }
 
