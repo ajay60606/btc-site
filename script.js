@@ -670,8 +670,8 @@ window.addEventListener("load", () => {
 
 function updateTestWrapper() {
 
-  const wrapper =
-    document.getElementById("test-wrapper");
+  const wrappers =
+  document.querySelectorAll(".image-wrapper");
 
 
   const viewportWidth =
@@ -714,11 +714,15 @@ function updateTestWrapper() {
   }
 
 
+  wrappers.forEach(wrapper => {
+
   wrapper.style.width =
     wrapperWidth + "px";
 
   wrapper.style.height =
     wrapperHeight + "px";
+
+});
 
 }
 
